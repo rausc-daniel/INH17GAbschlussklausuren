@@ -2,19 +2,19 @@
 
 ## Inhalt
 
-* BNK
+* [BNK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/BNK_und_IVN)
   * Python
   * Künstliche Intelligenz
   * XML
-* IAK und KIK
+* [IAK und KIK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/IAK_und_KIK)
   * HTML
   * CSS
   * jQuery
   * Node
-* MIM
+* [MIM](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MIM)
   * C++
   * GLSL
-* MKG
+* [MKG](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MKG)
   * ???
-* SSK
+* [SSK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/SSK)
   * ???
