@@ -2,7 +2,7 @@
 
 ## Inhalt
 
-* [BNK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/BNK_und_IVN)
+* [BNK und IVN](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/BNK_und_IVN)
   * Python
   * Künstliche Intelligenz
   * XML
