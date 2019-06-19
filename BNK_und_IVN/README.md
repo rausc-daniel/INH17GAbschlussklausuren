@@ -115,6 +115,41 @@ Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Fu
 
 ## Künstliche Intelligenz
 
+### Verfahren
+
+1. symbolisch &rarr; Das Wissen ist im KI-System explizit abgebildet. Dies kann durch Symbole, wie *Freund* oder *Feind* geschehen.
+2. subsymbolisch &rarr; Das Wissen ist nicht in Symbolen gespeichert und liegt somit nur in impliziter Form vor, dies ist zum Beispiel der Fall bei neuronalen Netzwerken
+
+### Agenten
+
+* Agenten sind autonome Einheiten, die ihre Umgebung wahrnehmen und mit ihr interagiern
+* Typen:
+  * rationaler Agent &rarr; handelt so, dass das Ziel möglichst *gut* erreicht wird
+  * idealer rationaler Agent &rarr; optimiert seine Performance anhand von Beobachtungen und Wissen.
+* Eigenschaften:
+  * Proaktiv &rarr; Löst Aktionen aufgrund eigener Initiative aus
+  * Reaktiv &rarr; Reagiert auf Veränderungen der Umweöt
+  * Autonom &rarr; Arbeitet weitgehen unabhängig vom Nutzer
+* optionale Eigenschaften:
+  * Anpassungsfähig &rarr; Lernt aus Erfahrungen
+  * Sozial &rarr; Kommuniziert mit andern Agenten
+  * Mobil &rarr; Kann den Ort wechseln
+* PAGE-Modell (4 Bausteine eines Agenten)
+  * **P**erception
+  * **A**ctions
+  * **G**oals
+  * **E**nvironment
+
+#### subkognitive / reaktive Agenten
+
+* einfacher reaktiver Agent &rarr; Eine Wahrnehmung führt zu einer Aktion
+* beobachtender reaktiver Agent &rarr; Gedächtnis, bestehend aus Erinnerungen, trägt zur Entscheidung bei
+
+#### kognitive Agenten
+
+* zielorientierter Agent &rarr; Speichert Wunschzustände und entscheidet basierend auf Erreichbarkeit
+* nutzenorientierter Agent &rarr; Gewichtet Weltzustände nach einem Nützlichkeitsfaktor
+
 ## XML
 
 XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hirarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden

@@ -10,7 +10,10 @@
 * Decorator :negative_squared_cross_mark:
 * Metaklassen :negative_squared_cross_mark:
 
-### Künstliche Intelligenz :negative_squared_cross_mark:
+### Künstliche Intelligenz :large_orange_diamond:
+
+* Verfahren :white_check_mark:
+* Agenten :large_orange_diamond:
 
 ### XML :large_orange_diamond:
 
