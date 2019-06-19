@@ -8,7 +8,7 @@
 * Collections :white_check_mark:
 * Klassen und Vererbung :white_check_mark:
 * Decorator :negative_squared_cross_mark:
-* Metaklassen :negative_squared_cross_mark:
+* Metaklassen :large_orange_diamond:
 
 ### Künstliche Intelligenz :large_orange_diamond:
 
