@@ -18,3 +18,6 @@
   * ???
 * [SSK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/SSK) :negative_squared_cross_mark:
   * ???
+## TODO
+
+[List](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/TODO.md)
