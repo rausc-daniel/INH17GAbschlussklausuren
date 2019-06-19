@@ -6,6 +6,7 @@
   * [Generelle Syntax](#generelle-syntax)
   * [Collections](#collections)
   * [Klassen und Vererbung](#klassen-und-vererbung)
+  * [Generators](#generators)
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
@@ -32,10 +33,13 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
 #### Variablen
 
 ```python
-    i = 1            # int
-    d = 1.0          # float
-    s = "string"     # string
-    i = d = s = True # dynamische Typisierung
+    myInt = 1            # int
+    myFloat = 1.0          # float
+    myString = "string"     # string
+    myInt = myFloat = myString = True # dynamische Typisierung
+    
+    # same as 2^3
+    myNumber = 2 ** 3
 ```
 
 #### Funktionen
@@ -86,6 +90,85 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     dict  = {} # mutable, mgl. keys: int, string, objekt/instanz, tuple
 
     x = list[begin, exclusive_end, step]
+
+    # LISTS
+    # Initialisierungsmethoden einer Liste
+    listA = [1, 2, 3]
+
+    # Der Liste hinzufügen
+    listA.append(myInt)
+
+    # Listen zusammenfügen,
+    listA = [1, 2, 3]
+    listB = [5, 6, 7]
+    listC = listA + listB
+    print(listC)
+    # => [1, 2, 3, 5, 6, 7]
+
+    print([1, 2, 3] * 3)
+    # => [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+    # DICTIONARIES
+    # Initialiserungsmethoden eines Dictionarys
+    # jeweils Key / Value
+    myDict = {}
+    myDict[1] = "Hallo"
+    myDict[2] = "Ich"
+    myDict[3] = "Bims"
+
+    myDict = {
+        1 : "Hey"
+        2 : "na"
+        3 : "du"
+        4 : "Giraffe"
+    }
+
+    # Aus dem Dictionary löschen
+    del myDict[1]
+    # oder
+    myDict.pop(1)
+
+    # Durch Dictionary iterieren
+    for number, text in myDict.items():
+        print("%d gehört zu %s" % (number, text))
+```
+
+### String Formatting
+
+```python
+    name = "Kevin"
+    age = 22
+    print("%s is %d years old" % (name, age))
+
+    # => gibt 5 aus weil 5 Zeichen
+    print(len(name)) 
+
+    # => gibt 3 aus weil "v" an dritter Stelle
+    print(name.index("v")) 
+
+    # => gibt 1 aus weil nur einmal "K" im string vorkommt
+    print(name.count("K")) 
+
+    # => gibt "evi" aus, er geht von Anfangsindex bis zum Endindex [start:end], negativ numbers gehen vom ende des strings aus, z.B. -3 -> dritte stelle von rechts
+    print(name[2:4])
+
+    # => gibt "en" aus, er geht von index 2 bis 5, überspringt aber immer 2 indexe [start:end:step]
+    print(name[2:5:2])
+
+    # => gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String 
+    print(name[::-1])
+
+    # => gibt jeweils "KEVIN" und "kevin" aus
+    print(name.upper())
+    print(name.lower())
+
+    # => gibt true und false aus
+    print(name.startswith("K"))
+    print(name.endswith("asdfasdfasdf"))
+
+    # => macht aus den String mehrere Strings und packt sie in eine Liste, er splittet jeweils an der Leerstelle " "
+    names = "Kevin Daniel Phillip Tom"
+    allnames = names.split(" ")
 ```
 
 ### Klassen und Vererbung
@@ -102,9 +185,35 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
         def _private(self): # private methode (Unterstrich)
             pass
 
+        def my_function(self):
+            print("Hi")
+
+        def add_method(self, a, b):
+            return a + b
+
     class Child(Parent): # Child erbt von Parent
         self.y = super.x # super = instanz der Elternklasse
         pass
+
+    # Klassenobjekt erzeugen
+    myClass = Parent(5)
+    myClass.my_function()
+    myInt = myClass.x
+    print(myClass.add_method(2, 3))
+```
+
+### Generators
+
+```python
+    import random
+
+    def lottery():
+        # returns 6 numbers between 1 and 40
+        for i in range(6):
+            yield random.randint(1, 40)
+
+        # returns a 7th number between 1 and 15
+        yield random.randint(1,15)
 ```
 
 Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Funktion/Feld implementieren ist unklar von welcher Klasse die Funktion geerbt wird
@@ -112,6 +221,12 @@ Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Fu
 ### Decorators
 
 ### Metaklassen
+
+```python
+    MyExampleClass = type('ExampleClass', (), {'myInt' : 0, 'myString' : 'hallo'}) # returns a class object
+    print(MyExampleClass)
+    print(MyExampleClass()) # create an instance with the class
+```
 
 ## Künstliche Intelligenz
 
@@ -128,11 +243,11 @@ Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Fu
   * idealer rationaler Agent &rarr; optimiert seine Performance anhand von Beobachtungen und Wissen.
 * Eigenschaften:
   * Proaktiv &rarr; Löst Aktionen aufgrund eigener Initiative aus
-  * Reaktiv &rarr; Reagiert auf Veränderungen der Umweöt
-  * Autonom &rarr; Arbeitet weitgehen unabhängig vom Nutzer
+  * Reaktiv &rarr; Reagiert auf Veränderungen der Umwelt
+  * Autonom &rarr; Arbeitet weitgehend unabhängig vom Nutzer
 * optionale Eigenschaften:
   * Anpassungsfähig &rarr; Lernt aus Erfahrungen
-  * Sozial &rarr; Kommuniziert mit andern Agenten
+  * Sozial &rarr; Kommuniziert mit anderen Agenten
   * Mobil &rarr; Kann den Ort wechseln
 * PAGE-Modell (4 Bausteine eines Agenten)
   * **P**erception
@@ -152,7 +267,7 @@ Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Fu
 
 ## XML
 
-XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hirarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden
+XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hierarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden
 
 ### Generelles
 
@@ -197,7 +312,7 @@ SVG steht für Scalable Vector Graphics und ist ein XML-Dialekt, der zur Definit
 
 ### SMIL
 
-SMIl steht für Synchronized Multimedia Integration Language und ist ein XML-Dialekt, mit dem man zeisynchron Multimediainhalte (Bilder, Videos, Ton etc.) animieren kann.
+SMIL steht für Synchronized Multimedia Integration Language und ist ein XML-Dialekt, mit dem man zeitsynchron Multimediainhalte (Bilder, Videos, Ton etc.) animieren kann.
 
 ```xml
     
@@ -253,7 +368,7 @@ Typen können Attribute haben.
 
 #### Erweiterungen und Einschränkungen
 
-Komplexe und einface Typen können im Nachhinein erweitert werden.
+Komplexe und einfache Typen können im Nachhinein erweitert werden.
 
 ```xml
     <extension base="pc-Typ">
