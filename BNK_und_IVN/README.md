@@ -6,7 +6,7 @@
   * [Generelle Syntax](#generelle-syntax)
   * [Collections](#collections)
   * [Klassen und Vererbung](#klassen-und-vererbung)
-  * [Generators](#generators)
+  * [Enumerators](#enumerators)
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
@@ -82,6 +82,44 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
         pass
 ```
 
+#### String Formatierung
+
+```python
+    name = "Kevin"
+    age = 22
+    print("%s is %d years old" % (name, age))
+
+    # => gibt 5 aus weil 5 Zeichen
+    print(len(name)) 
+
+    # => gibt 3 aus weil "v" an dritter Stelle
+    print(name.index("v")) 
+
+    # => gibt 1 aus weil nur einmal "K" im string vorkommt
+    print(name.count("K")) 
+
+    # => gibt "evi" aus, er geht von Anfangsindex bis zum Endindex [start:end], negativ numbers gehen vom ende des strings aus, z.B. -3 -> dritte stelle von rechts
+    print(name[2:4])
+
+    # => gibt "en" aus, er geht von index 2 bis 5, überspringt aber immer 2 indexe [start:end:step]
+    print(name[2:5:2])
+
+    # => gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String 
+    print(name[::-1])
+
+    # => gibt jeweils "KEVIN" und "kevin" aus
+    print(name.upper())
+    print(name.lower())
+
+    # => gibt true und false aus
+    print(name.startswith("K"))
+    print(name.endswith("asdfasdfasdf"))
+
+    # => macht aus den String mehrere Strings und packt sie in eine Liste, er splittet jeweils an der Leerstelle " "
+    names = "Kevin Daniel Phillip Tom"
+    allnames = names.split(" ")
+```
+
 ### Collections
 
 ```python
@@ -133,44 +171,6 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
         print("%d gehört zu %s" % (number, text))
 ```
 
-### String Formatting
-
-```python
-    name = "Kevin"
-    age = 22
-    print("%s is %d years old" % (name, age))
-
-    # => gibt 5 aus weil 5 Zeichen
-    print(len(name)) 
-
-    # => gibt 3 aus weil "v" an dritter Stelle
-    print(name.index("v")) 
-
-    # => gibt 1 aus weil nur einmal "K" im string vorkommt
-    print(name.count("K")) 
-
-    # => gibt "evi" aus, er geht von Anfangsindex bis zum Endindex [start:end], negativ numbers gehen vom ende des strings aus, z.B. -3 -> dritte stelle von rechts
-    print(name[2:4])
-
-    # => gibt "en" aus, er geht von index 2 bis 5, überspringt aber immer 2 indexe [start:end:step]
-    print(name[2:5:2])
-
-    # => gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String 
-    print(name[::-1])
-
-    # => gibt jeweils "KEVIN" und "kevin" aus
-    print(name.upper())
-    print(name.lower())
-
-    # => gibt true und false aus
-    print(name.startswith("K"))
-    print(name.endswith("asdfasdfasdf"))
-
-    # => macht aus den String mehrere Strings und packt sie in eine Liste, er splittet jeweils an der Leerstelle " "
-    names = "Kevin Daniel Phillip Tom"
-    allnames = names.split(" ")
-```
-
 ### Klassen und Vererbung
 
 ```python
@@ -202,7 +202,7 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     print(myClass.add_method(2, 3))
 ```
 
-### Generators
+### Enumerators
 
 ```python
     import random
