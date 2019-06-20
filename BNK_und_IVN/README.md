@@ -10,6 +10,8 @@
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
+  * [Generelle Informationen](#genrelle-informationen)
+  * [Agenten](#agenten)
 * [XML](#xml)
   * [Generelles](#generelles)
   * [SVG](#svg)
@@ -230,10 +232,22 @@ Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Fu
 
 ## Künstliche Intelligenz
 
-### Verfahren
+### Allgemeine Informationen
 
-1. symbolisch &rarr; Das Wissen ist im KI-System explizit abgebildet. Dies kann durch Symbole, wie *Freund* oder *Feind* geschehen.
-2. subsymbolisch &rarr; Das Wissen ist nicht in Symbolen gespeichert und liegt somit nur in impliziter Form vor, dies ist zum Beispiel der Fall bei neuronalen Netzwerken
+#### Verfahren
+
+* symbolisch &rarr; Das Wissen ist im KI-System explizit abgebildet. Dies kann durch Symbole, wie *Freund* oder *Feind* geschehen.
+* subsymbolisch &rarr; Das Wissen ist nicht in Symbolen gespeichert und liegt somit nur in impliziter Form vor, dies ist zum Beispiel der Fall bei neuronalen Netzwerken
+
+#### Typen
+
+* starke KI &rarr; Nachempfinden des menschlichen Denkverhaltens
+* schwache KI &rarr; KI-Technologien anwenden, um Probleme der echten Welt zu lösen
+* Illusion of Intelligence &rarr; Intelligenz ist nur subjektiv (häufig der Ansatz für Game-AI)
+
+#### Turing-Test
+
+Testet, ob eine Maschine menschliches Denkverhalten nachahmen kann. Wenn ein Tester die Maschine nicht von einem Menschen unterscheiden kann, hat die Maschine bestanden. Das Chinese-Room-Argument allerdings zeigt, dass der Turing-Test allein nicht genügt um einer Maschine ein Bewusstsein zuzusprechen.
 
 ### Agenten
 
@@ -264,6 +278,33 @@ Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Fu
 
 * zielorientierter Agent &rarr; Speichert Wunschzustände und entscheidet basierend auf Erreichbarkeit
 * nutzenorientierter Agent &rarr; Gewichtet Weltzustände nach einem Nützlichkeitsfaktor
+
+#### Umgebung von Agenten
+
+Die Umgebung in der sich Softwareagenten aufhalten, kann mit den folgen Kriterien beschrieben werden
+
+* Zugänglich &rarr; alle etschidungsrelevanten Teile der Umgebung sind beobachtbat
+* Determiniertheit &rarr; Aktionen haben eindeutige Folgen auf die Umgebung
+* Episodisch &rarr; Erfahrung kann in einzelne Episoden (z.B.: Wahrnehmung, Handlung etc.) eingeteilt werden
+* Statisch &rarr; Umgebung bleibt während der Entschidung unverändert
+* Auflösung &rarr; Ist die Umgebung diskret (fest Größe) oder kontinuirlich
+
+#### Multiagentensystem
+
+* mehrere gleichartige oder unterschiedlich spezialisierte Einheiten in der gleichen Umgebung &rarr; Ameisenhaufen, Bienenkolonie
+* zwei Ansätze
+  * Bottom-Top &rarr; Spezifische Regeln werden auf Individuenebene deklariert und damit unabhängige Agenten definiert
+  * Top-Bottom &rarr; Interaktionsregeln und damit der Verband wird definiert
+
+#### Heuristiken
+
+Heuristiken sind Methoden bzw. Faustregeln, die genutzt werden können um den Prozess der Entscheidungsfindung von Agenten zu beschreiben
+
+* "most constrained" &rarr; Die Aktion mit den meisten Eischränkungen soll zuerst ausgeführt werden
+* "das schwierigste zuert" &rarr; Die Aktion, die die meiste Arbeit benötigt, wird bevorzugt
+* "das erfolgsversprechendste zuerst" &rarr; Die Aktion, die den meisten Nutzen hat, soll zuerst ausgeführt werden.
+
+&rarr; Der Spieler soll denken, dass die KI "schlau ist", ohne dies tatsächlich zu sein
 
 ## XML
 
