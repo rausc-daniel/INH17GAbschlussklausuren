@@ -12,8 +12,11 @@
 
 ### Künstliche Intelligenz :large_orange_diamond:
 
-* Verfahren :white_check_mark:
-* Agenten :large_orange_diamond:
+* Allgemeine Informationen :white_check_mark:
+* Agenten :white_check_mark:
+* Endliche Automaten :negative_squared_cross_mark:
+* Behaviour Trees :negative_squared_cross_mark:
+* Neuronale Netzwerke :negative_squared_cross_mark:
 
 ### XML :large_orange_diamond:
 
