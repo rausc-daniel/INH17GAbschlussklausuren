@@ -10,8 +10,11 @@
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
-  * [Generelle Informationen](#genrelle-informationen)
+  * [Allgemeine Informationen](#allgemeineinformationen)
   * [Agenten](#agenten)
+  * [Endliche Automaten](#endliche-automaten)
+  * [Behaviour Trees](#behaviour-trees)
+  * [Neuronale Netze](#neuronale-netze)
 * [XML](#xml)
   * [Generelles](#generelles)
   * [SVG](#svg)
@@ -305,6 +308,12 @@ Heuristiken sind Methoden bzw. Faustregeln, die genutzt werden können um den Pr
 * "das erfolgsversprechendste zuerst" &rarr; Die Aktion, die den meisten Nutzen hat, soll zuerst ausgeführt werden.
 
 &rarr; Der Spieler soll denken, dass die KI "schlau ist", ohne dies tatsächlich zu sein
+
+### Endliche Automaten
+
+### Behavior Trees
+
+### Neuronale Netze
 
 ## XML
 
