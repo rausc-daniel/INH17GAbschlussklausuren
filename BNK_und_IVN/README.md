@@ -10,7 +10,7 @@
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
-  * [Allgemeine Informationen](#allgemeineinformationen)
+  * [Allgemeine Informationen](#allgemeine-informationen)
   * [Agenten](#agenten)
   * [Endliche Automaten](#endliche-automaten)
   * [Behaviour Trees](#behaviour-trees)
@@ -311,7 +311,7 @@ Heuristiken sind Methoden bzw. Faustregeln, die genutzt werden können um den Pr
 
 ### Endliche Automaten
 
-### Behavior Trees
+### Behaviour Trees
 
 ### Neuronale Netze
 
