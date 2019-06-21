@@ -22,10 +22,10 @@
 
 * Generelles :white_check_mark:
 * SVG :white_check_mark:
-* SMIL :negative_squared_cross_mark:
+* SMIL :white_check_mark:
 * Schema (XSD) :white_check_mark:
 * Schematron :white_check_mark:
-* Transformation (XSLT) :negative_squared_cross_mark:
+* Transformation (XSLT) :large_orange_diamond:
 * DOM :negative_squared_cross_mark:
 * Document Type Definition (DTD) :negative_squared_cross_mark:
 * XPath, XLink, XQuery :negative_squared_cross_mark:

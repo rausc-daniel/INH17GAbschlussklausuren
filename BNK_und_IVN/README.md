@@ -322,7 +322,7 @@ Endliche Automaten sind abstrakte Maschinen, die eine feste Anzahl an Zuständen
 
 ## XML
 
-XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hierarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden
+XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hierarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden. XML erlaubt es mehrere verschiedene Dialekte im gleichen Dokument zu habel, sofern jeder mit einem eindeutigen Prefix ausgewiesen wird.
 
 ### Generelles
 
@@ -465,6 +465,40 @@ Patterns sind eine Möglichkeit seine Unit-Tests zu gruppieren, während man mit
 ```
 
 ### XSLT
+
+XSLT steht für eXtensible Stylesheet Language Transformations und ist ein XML-Dialekt, der es erlaubt jede belibige XML-Datei wie XHTML zu behandeln.
+
+```xml
+    <stylesheet version="1.0" xmlns="http://www.w3.org/1999/XSL/Transform">
+        <template match="context">
+            <!-- html -->
+        </template>
+    </stylesheet>
+```
+
+#### Werte abrufen
+
+```xml
+    <value-of select="XPath Ausdruck zum Wert" />
+```
+
+#### Schleifen
+
+```xml
+    <!-- Geht über alle Kindelemente der ausgewählten Node -->
+    <for-each select="XPath Ausdruck zur Branch-Node" />
+        <value-of select="XPath Ausdruck zum Wert" />
+    </for-each>
+```
+
+#### Sortierung
+
+```xml
+    <for-each select="XPath Ausdruck zur Branch-Node" />
+        <sort select="XPath Ausdruck zum Wert" order="ascending|descending">
+        <value-of select="XPath Ausdruck zum Wert" />
+    </for-each>
+```
 
 ### DOM
 
