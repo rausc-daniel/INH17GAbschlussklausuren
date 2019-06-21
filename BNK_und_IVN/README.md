@@ -530,6 +530,31 @@ XSLT steht für eXtensible Stylesheet Language Transformations und ist ein XML-D
 
 ### XPath XLink XQuery
 
+#### XPath
+
+XPath ist eine Abfragesprache, die dazu dient Element in einem XML-Dokument zu addressieren und auszuwerten.
+
+```xml
+    <Root>
+        <Element attr="attribute">
+            Text
+        </Element>
+    </Root>
+
+    <!-- Root -->
+    <element xpath="/">
+
+    <!-- Text in einem Tag -->
+    <element xpath="/Root/Element">
+
+    <!-- Attribute -->
+    <element xpath="/Root/Element[@attr]">
+```
+
+#### XLink
+
+#### XQuery
+
 ### Ajax
 
 ## Verschiedenes
