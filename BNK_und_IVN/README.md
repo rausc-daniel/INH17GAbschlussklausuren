@@ -320,6 +320,30 @@ Endliche Automaten sind abstrakte Maschinen, die eine feste Anzahl an Zuständen
 
 ### Neuronale Netze
 
+Neuronale Netze sind Netzwerke von autonom agierenden Recheneinheiten (Neuronen), die sich in ihrem Aufbau an neuronalen System der Biologie orientieren. Das erste Neuronale Netzwerk war das sog. Perzeptron, welches 1962 von Frank Rosenblatt erfunden wurde.
+
+Problembeschreibung &rarr; **Netz** &rarr; Problemlösung
+
+Neuronale Netze passen sich in einer Lernphase an die Problemphase an. Dieses Lernen geschieht über die Veränderung des Netzes.
+
+#### Allgemeines
+
+#### Neuronen
+
+##### Aufbau
+
+##### Biologie als Vorbild
+
+#### Lernvorgänge
+
+##### Lernparadigmen
+
+* supervised Learning (überwachtes Lernen) &rarr; Beim supervised Learning liefert das Netz einen Ist-Output, woraufhin dieser mit dem Soll-Output verglichen wird. Weicht der Ist-Output vom Soll-Output ab, wird der Fehler gesucht und minimiert.
+
+* unsupervised Learning (unüberwachtes Lernen) &rarr; Beim unsupervised Learning passt sich das Netz quasi live an den Input an und benötigt kein Eingreifen in seine Struktur. Dies geschieht z.B. indem häufig genutzte Verbindungen gestärkt werden. Problem hierbei ist, dass die Richtigkeit des Netzes in einem lokalen Minimum landen kann und somit nicht sein volles Potenzial genutzt wird.
+
+TODO: Grafik
+
 ## XML
 
 XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hierarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden. XML erlaubt es mehrere verschiedene Dialekte im gleichen Dokument zu habel, sofern jeder mit einem eindeutigen Prefix ausgewiesen wird.
