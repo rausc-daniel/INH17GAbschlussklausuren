@@ -10,7 +10,7 @@
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
-  * [Allgemeine Informationen](#allgemeineinformationen)
+  * [Allgemeine Informationen](#allgemeine-informationen)
   * [Agenten](#agenten)
   * [Endliche Automaten](#endliche-automaten)
   * [Behaviour Trees](#behaviour-trees)
@@ -316,7 +316,7 @@ Endliche Automaten sind abstrakte Maschinen, die eine feste Anzahl an Zuständen
 * Deterministisch &rarr; Verhalten ist eindeutig und konstant nachvollziehbar und vorbestimmt &rarr; leicht zu beherrschen
 * Nicht Deterministisch &rarr; Verhalten ist nicht eindeutig bestimmt und Zufall spielt eine Rolle bei den Übergänge &rarr; realistischer
 
-### Behavior Trees
+### Behaviour Trees
 
 ### Neuronale Netze
 
