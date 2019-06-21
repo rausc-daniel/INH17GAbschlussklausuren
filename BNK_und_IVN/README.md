@@ -339,39 +339,9 @@ XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung v
 
 SVG steht für Scalable Vector Graphics und ist ein XML-Dialekt, der zur Definition von 2D Vektorgrafiken genutzt wird.
 
-```xml
-    <!-- Namespace -->
-    <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-
-        <!-- Kreis -->
-        <circle cx="125" cy="125" r="75" />
-
-        <!-- Rechteck -->
-        <rect x="25" y="25" width="200" height="200" />
-
-        <!-- Linie -->
-        <line x1="50" y1="50" x2="200" y2="200" />
-
-        <!-- Polygon -->
-        <polyline points="50,150 50,200 200,200 200,100" />
-
-        <!-- Animation -->
-        <rect x="25" y="25" width="200" height="200" >
-            <animateTransform
-            type="rotate" repeatCount="indefinite"
-            from="0 250 125" to="360 250 125" begin="0" dur="5s" />
-        </rect>
-
-    </svg>
-```
-
 ### SMIL
 
 SMIL steht für Synchronized Multimedia Integration Language und ist ein XML-Dialekt, mit dem man zeitsynchron Multimediainhalte (Bilder, Videos, Ton etc.) animieren kann.
-
-```xml
-
-```
 
 ### XSD
 
