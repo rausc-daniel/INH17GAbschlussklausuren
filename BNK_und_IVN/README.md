@@ -42,7 +42,7 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     myFloat = 1.0          # float
     myString = "string"     # string
     myInt = myFloat = myString = True # dynamische Typisierung
-    
+
     # same as 2^3
     myNumber = 2 ** 3
 ```
@@ -82,7 +82,7 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
 
     for x in array:
         pass
-    
+
     while True:
         pass
 ```
@@ -95,13 +95,13 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     print("%s is %d years old" % (name, age))
 
     # => gibt 5 aus weil 5 Zeichen
-    print(len(name)) 
+    print(len(name))
 
     # => gibt 3 aus weil "v" an dritter Stelle
-    print(name.index("v")) 
+    print(name.index("v"))
 
     # => gibt 1 aus weil nur einmal "K" im string vorkommt
-    print(name.count("K")) 
+    print(name.count("K"))
 
     # => gibt "evi" aus, er geht von Anfangsindex bis zum Endindex [start:end], negativ numbers gehen vom ende des strings aus, z.B. -3 -> dritte stelle von rechts
     print(name[2:4])
@@ -109,7 +109,7 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     # => gibt "en" aus, er geht von index 2 bis 5, überspringt aber immer 2 indexe [start:end:step]
     print(name[2:5:2])
 
-    # => gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String 
+    # => gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String
     print(name[::-1])
 
     # => gibt jeweils "KEVIN" und "kevin" aus
@@ -311,6 +311,11 @@ Heuristiken sind Methoden bzw. Faustregeln, die genutzt werden können um den Pr
 
 ### Endliche Automaten
 
+Endliche Automaten sind abstrakte Maschinen, die eine feste Anzahl an Zuständen haben und zwischen diesen wechseln (Input &rarr; ZustandA &rarr; ZustandB &rarr; Output) z.B.: Unity Animator.
+
+* Deterministisch &rarr; Verhalten ist eindeutig und konstant nachvollziehbar und vorbestimmt &rarr; leicht zu beherrschen
+* Nicht Deterministisch &rarr; Verhalten ist nicht eindeutig bestimmt und Zufall spielt eine Rolle bei den Übergänge &rarr; realistischer
+
 ### Behavior Trees
 
 ### Neuronale Netze
@@ -365,7 +370,7 @@ SVG steht für Scalable Vector Graphics und ist ein XML-Dialekt, der zur Definit
 SMIL steht für Synchronized Multimedia Integration Language und ist ein XML-Dialekt, mit dem man zeitsynchron Multimediainhalte (Bilder, Videos, Ton etc.) animieren kann.
 
 ```xml
-    
+
 ```
 
 ### XSD
@@ -458,7 +463,7 @@ Bestehende Typen können außerdem weiter eingeschränkt werden. Hierzu müssen 
 
 Schematron ist eine Möglichkeit Unit Tests für XML-Dateien zu schreiben. Sie validieren somit den Inhalt der Tags und nicht den Aufbau der XML-Datei
 
-```xml    
+```xml
     <schema xmlns="http://purl.oclc.org/dsdl/schematron">
 ```
 

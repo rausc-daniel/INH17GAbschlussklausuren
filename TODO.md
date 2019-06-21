@@ -14,7 +14,7 @@
 
 * Allgemeine Informationen :white_check_mark:
 * Agenten :white_check_mark:
-* Endliche Automaten :negative_squared_cross_mark:
+* Endliche Automaten :white_check_mark:
 * Behaviour Trees :negative_squared_cross_mark:
 * Neuronale Netzwerke :negative_squared_cross_mark:
 
