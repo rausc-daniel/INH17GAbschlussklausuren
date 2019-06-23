@@ -336,7 +336,7 @@ Ein Neuron besteht aus mehreren gewichteten Inputs (w0..w1), einem Threshold (T)
 * Threshold &rarr; Ist die Summe der Inputs größer als der Threshold, feuert das Neuron. Der Threshold kann ein Schwellenwert sein, oder durch eine Aktivierungsfunktion bestimmt werden.
 * Output &rarr; Der Output ist ein binärer Wert (feuert / feuert nicht) oder das Ergebnis der Aktivierungsfunktion. Er wird alle alle Neuronen in der nächsten Schicht weitergeleitet
 
-![Aufbau eines Neurons](/img/neuron.png)
+![Aufbau eines Neurons](BNK_und_IVN/img/neuron.png)
 
 ##### Biologie als Vorbild
 
@@ -348,7 +348,7 @@ Ein Neuron besteht aus mehreren gewichteten Inputs (w0..w1), einem Threshold (T)
 
 * unsupervised Learning (unüberwachtes Lernen) &rarr; Beim unsupervised Learning passt sich das Netz quasi live an den Input an und benötigt kein Eingreifen in seine Struktur. Dies geschieht z.B. indem häufig genutzte Verbindungen gestärkt werden. Problem hierbei ist, dass die Richtigkeit des Netzes in einem lokalen Minimum landen kann und somit nicht sein volles Potenzial genutzt wird.
 
-![Lokale Minima](/img/local_minima.png)
+![Lokale Minima](BNK_und_IVN/img/local_minima.png)
 
 ## XML
 
