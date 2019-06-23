@@ -352,6 +352,14 @@ Die Topologie eines Netzes beschreibt seinen Aufbau. Bestandteile hiervon sind d
 
 Neuronale Netze können auf diverse Arten lernen. Die zwei wichtigsten sind die Veränderung der Netztopologie und die Anpassung von Gewichtungen der einzelnen Verbindungen.
 
+##### Lernparadigmen
+
+* supervised Learning (überwachtes Lernen) &rarr; Beim supervised Learning liefert das Netz einen Ist-Output, woraufhin dieser mit dem Soll-Output verglichen wird. Weicht der Ist-Output vom Soll-Output ab, wird der Fehler gesucht und minimiert.
+
+* unsupervised Learning (unüberwachtes Lernen) &rarr; Beim unsupervised Learning passt sich das Netz quasi live an den Input an und benötigt kein Eingreifen in seine Struktur. Dies geschieht z.B. indem häufig genutzte Verbindungen gestärkt werden. Problem hierbei ist, dass die Richtigkeit des Netzes in einem lokalen Minimum landen kann und somit nicht sein volles Potenzial genutzt wird.
+
+![Lokale Minima](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/local_minima.png)
+
 ##### Delta-Regel
 
 Die Delta Regel ist eine der wichtigsten Lernmethoden des supervised learning. Sie ist für Feed-Forward-Netze gedacht, also Netze, die ihren Output nicht weiterverarbeiten. Sie funktioniert indem der Ist-Output von jedem Neuron mit seinem Soll-Ouput verglichen wird und bei Abweichungen angepasst wird. Die Anpassung geschieht mithilfe eines Lernfaktors an den Gewichten der einzelnen Verbindungen.
@@ -363,14 +371,6 @@ Die Delta Regel ist eine der wichtigsten Lernmethoden des supervised learning. S
 Die Hebb'sche Regel ist eine Lernregel für zirkulare Netze, die ihren Output weiterverarbeiten und ist somit für unsupervised learning gedacht. Sie belohnt Verbindungen, bei denen beide Neuronen feuern indem das Gewicht dieser Verbindung erhöht wird. Alle anderen Kombinationen bleiben unberührt.
 
 ![Hebb'sche Regel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/hebb.png)
-
-##### Lernparadigmen
-
-* supervised Learning (überwachtes Lernen) &rarr; Beim supervised Learning liefert das Netz einen Ist-Output, woraufhin dieser mit dem Soll-Output verglichen wird. Weicht der Ist-Output vom Soll-Output ab, wird der Fehler gesucht und minimiert.
-
-* unsupervised Learning (unüberwachtes Lernen) &rarr; Beim unsupervised Learning passt sich das Netz quasi live an den Input an und benötigt kein Eingreifen in seine Struktur. Dies geschieht z.B. indem häufig genutzte Verbindungen gestärkt werden. Problem hierbei ist, dass die Richtigkeit des Netzes in einem lokalen Minimum landen kann und somit nicht sein volles Potenzial genutzt wird.
-
-![Lokale Minima](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/local_minima.png)
 
 ## XML
 
