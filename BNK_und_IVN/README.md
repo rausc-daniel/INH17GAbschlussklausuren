@@ -340,6 +340,14 @@ Ein Neuron besteht aus mehreren gewichteten Inputs (w0..w1), einem Threshold (T)
 
 ##### Biologie als Vorbild
 
+Der Aufbau von neuronales Netzen orientiert sich an der Struktur von Nervensystemen in Tieren.
+
+![Biologie als Vorbild](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/biology.png)
+
+### Topologie
+
+Die Topologie eines Netzes beschreibt seinen Aufbau. Bestandteile hiervon sind die Anzahl der Schichten, wie viele Neuronen jede Schicht enthält und welche Neuronen mit welchen Anderen verbunden sind. Außerdem beschreibt sie wie viele Input- und Output-Neuronen das Netz hat.
+
 #### Lernvorgänge
 
 ##### Lernparadigmen
