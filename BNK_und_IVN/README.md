@@ -326,11 +326,17 @@ Problembeschreibung &rarr; **Netz** &rarr; Problemlösung
 
 Neuronale Netze passen sich in einer Lernphase an die Problemphase an. Dieses Lernen geschieht über die Veränderung des Netzes.
 
-#### Allgemeines
-
 #### Neuronen
 
 ##### Aufbau
+
+Ein Neuron besteht aus mehreren gewichteten Inputs (w0..w1), einem Threshold (T) und einem Output (o).
+
+* Inputs &rarr; Die Inputs kommen von den Neuronen in der vorherigen Schicht und werden einzeln gewichtet.
+* Threshold &rarr; Ist die Summe der Inputs größer als der Threshold, feuert das Neuron. Der Threshold kann ein Schwellenwert sein, oder durch eine Aktivierungsfunktion bestimmt werden.
+* Output &rarr; Der Output ist ein binärer Wert (feuert / feuert nicht) oder das Ergebnis der Aktivierungsfunktion. Er wird alle alle Neuronen in der nächsten Schicht weitergeleitet
+
+![Aufbau eines Neurons](img\neuron.png)
 
 ##### Biologie als Vorbild
 
@@ -342,7 +348,7 @@ Neuronale Netze passen sich in einer Lernphase an die Problemphase an. Dieses Le
 
 * unsupervised Learning (unüberwachtes Lernen) &rarr; Beim unsupervised Learning passt sich das Netz quasi live an den Input an und benötigt kein Eingreifen in seine Struktur. Dies geschieht z.B. indem häufig genutzte Verbindungen gestärkt werden. Problem hierbei ist, dass die Richtigkeit des Netzes in einem lokalen Minimum landen kann und somit nicht sein volles Potenzial genutzt wird.
 
-TODO: Grafik
+![Lokale Minima](img\local_minima.png)
 
 ## XML
 
