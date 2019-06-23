@@ -318,6 +318,10 @@ Endliche Automaten sind abstrakte Maschinen, die eine feste Anzahl an Zuständen
 
 ### Behaviour Trees
 
+Behaviour Trees sind Baumstrukturen, die Aktionsmuster beschreiben. Sie bestehen aus Nodes, die hintereinander geschaltet werden und zu bestimmten Konditionen eine Aktion ausführen. Nodes auf der gleichen Ebene werden nacheinander abgearbeitet und sobald eine Kondition erfüllt ist wird die Aktion ausgeführt eine Ebene tiefer gegangen.
+
+![Aufbau von Behaviour Trees](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/behaviour_trees.png)
+
 ### Neuronale Netze
 
 Neuronale Netze sind Netzwerke von autonom agierenden Recheneinheiten (Neuronen), die sich in ihrem Aufbau an neuronalen System der Biologie orientieren. Das erste Neuronale Netzwerk war das sog. Perzeptron, welches 1962 von Frank Rosenblatt erfunden wurde.
