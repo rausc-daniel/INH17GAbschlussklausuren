@@ -374,6 +374,12 @@ Die Hebb'sche Regel ist eine Lernregel für zirkulare Netze, die ihren Output we
 
 ![Hebb'sche Regel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/hebb.png)
 
+#### Nicht linear Separierbare Probleme und zusätliche Schichten
+
+In neuronalen Netzwerken generiert jede Schicht eine Gerade (bei mehreren Parametern Hyperebene genannt), die zwei Gruppen voneinander trennt. Hat man allerdings mehr als zwei Gruppen oder sind zwei Gruppen speziell angeordnet reicht eine gerade nicht mehr aus um diese zu trennen. In diesem Fall fügt man dem Netz mehr Schichten hinzu und hat somit mehr geraden zur Verfügung.
+
+![Nichtliniare Separierbarkeit](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/multiple_layers.png)
+
 ## XML
 
 XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hierarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden. XML erlaubt es mehrere verschiedene Dialekte im gleichen Dokument zu habel, sofern jeder mit einem eindeutigen Prefix ausgewiesen wird.
