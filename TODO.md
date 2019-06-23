@@ -10,13 +10,13 @@
 * Decorator :negative_squared_cross_mark:
 * Metaklassen :large_orange_diamond:
 
-### Künstliche Intelligenz :large_orange_diamond:
+### Künstliche Intelligenz :ballot_box_with_check:
 
 * Allgemeine Informationen :ballot_box_with_check:
 * Agenten :ballot_box_with_check:
 * Endliche Automaten :ballot_box_with_check:
-* Behaviour Trees :negative_squared_cross_mark:
-* Neuronale Netzwerke :large_orange_diamond:
+* Behaviour Trees :ballot_box_with_check:
+* Neuronale Netzwerke :ballot_box_with_check:
 
 ### XML :large_orange_diamond:
 
