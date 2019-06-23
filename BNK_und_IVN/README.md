@@ -584,7 +584,7 @@ XPath ist eine Abfragesprache, die dazu dient Elemente in einem XML-Dokument zu 
     <!-- Root -->
     <element xpath="/">
 
-    <!-- Text in einem Tag -->
+    <!-- Kindelemt(-e) eines Tags, kann Text sein-->
     <element xpath="/Root/Element">
 
     <!-- Attribute -->
@@ -596,6 +596,8 @@ XPath ist eine Abfragesprache, die dazu dient Elemente in einem XML-Dokument zu 
 #### XQuery
 
 ### Ajax
+
+Ajax steht für Asynchronous JavaScript and XML und ermöglicht es asynchronde Anfragen an einen Webserver zu senden und die aktuelle HTML-Seite zu verändern ohne sie neu zu laden.
 
 ## Verschiedenes
 

@@ -28,7 +28,7 @@
 * Transformation (XSLT) :ballot_box_with_check:
 * Document Type Definition (DTD) :ballot_box_with_check:
 * XPath, XLink, XQuery :large_orange_diamond:
-* Ajax :negative_squared_cross_mark:
+* Ajax :ballot_box_with_check:
 
 ### Verschiedenes :ballot_box_with_check:
 
