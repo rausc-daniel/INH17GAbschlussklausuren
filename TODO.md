@@ -25,9 +25,8 @@
 * SMIL :ballot_box_with_check:
 * Schema (XSD) :ballot_box_with_check:
 * Schematron :ballot_box_with_check:
-* Transformation (XSLT) :large_orange_diamond:
-* DOM :negative_squared_cross_mark:
-* Document Type Definition (DTD) :negative_squared_cross_mark:
+* Transformation (XSLT) :ballot_box_with_check:
+* Document Type Definition (DTD) :ballot_box_with_check:
 * XPath, XLink, XQuery :large_orange_diamond:
 * Ajax :negative_squared_cross_mark:
 

@@ -564,15 +564,15 @@ XSLT steht für eXtensible Stylesheet Language Transformations und ist ein XML-D
     </for-each>
 ```
 
-### DOM
-
 ### DTD
+
+DTD steht für Document Type Definition und wird genutzt um die Struktur, die Verschachtelung und den Inhalt von XML-Dokumenten zu definieren. Es deklariert somit einen wiederverwndbaren Dokumenttypen.
 
 ### XPath XLink XQuery
 
 #### XPath
 
-XPath ist eine Abfragesprache, die dazu dient Element in einem XML-Dokument zu addressieren und auszuwerten.
+XPath ist eine Abfragesprache, die dazu dient Elemente in einem XML-Dokument zu addressieren und auszuwerten.
 
 ```xml
     <Root>
@@ -601,4 +601,4 @@ XPath ist eine Abfragesprache, die dazu dient Element in einem XML-Dokument zu a
 
 ### Vim
 
-*Vim* ist ein mit Plugins erweiterbarer Texteditor, der in den 80ern entwickelt wurde. *Vim* ist auf allen Unix-Systemen (Linux, MacOS) vorinstalliert und läuft sowohl als eigenständiges Programm als auch in der Kommandozeile.
+*Vim* ist ein mit Plugins erweiterbarer Texteditor, der in den 80ern entwickelt wurde. *Vim* ist auf allen Unix-Systemen (Linux, MacOS) vorinstalliert und läuft sowohl als eigenständiges Programm als auch in der Kommandozeile und über SSH-Verbindungen.
