@@ -6,7 +6,7 @@
   * [Generelle Syntax](#generelle-syntax)
   * [Collections](#collections)
   * [Klassen und Vererbung](#klassen-und-vererbung)
-  * [Enumerators](#enumerators)
+  * [Generators](#generators)
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
@@ -38,13 +38,13 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
 #### Variablen
 
 ```python
-    myInt = 1            # int
-    myFloat = 1.0          # float
-    myString = "string"     # string
-    myInt = myFloat = myString = True # dynamische Typisierung
+    my_int = 1               # int
+    my_float = 1.0           # float
+    my_string = "string"     # string
+    my_int = my_float = my_string = True # dynamische Typisierung
 
-    # same as 2^3
-    myNumber = 2 ** 3
+    # Potenzen
+    my_number = 2 ** 3 # equivalent zu 2 * 2 * 2
 ```
 
 #### Funktionen
@@ -53,11 +53,11 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     def function(parameter):
         pass
 
-    # parameter as List
+    # parameter als Liste
     def params(*args):
         pass
 
-    # parameter as Dictionary
+    # parameter als Dictionary
     def named_params(**kwargs):
         pass
 ```
@@ -92,35 +92,41 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
 ```python
     name = "Kevin"
     age = 22
-    print("%s is %d years old" % (name, age))
 
-    # => gibt 5 aus weil 5 Zeichen
+    # old-school / C methode
+    print("%s is %d years old" % (name, age))
+    # neuere string format methode
+    print("{} is {} years old".format(name, age))
+    # string interpolation
+    print(f"{name} is {age} years old")
+
+    # gibt 5 aus weil 5 Zeichen
     print(len(name))
 
-    # => gibt 3 aus weil "v" an dritter Stelle
+    # gibt 3 aus weil "v" an dritter Stelle
     print(name.index("v"))
 
-    # => gibt 1 aus weil nur einmal "K" im string vorkommt
+    # gibt 1 aus weil nur einmal "K" im string vorkommt
     print(name.count("K"))
 
-    # => gibt "evi" aus, er geht von Anfangsindex bis zum Endindex [start:end], negativ numbers gehen vom ende des strings aus, z.B. -3 -> dritte stelle von rechts
+    # gibt "evi" aus, er geht von Anfangsindex bis zum Endindex [start:end], negativ numbers gehen vom ende des strings aus, z.B. -3 -> dritte stelle von rechts
     print(name[2:4])
 
-    # => gibt "en" aus, er geht von index 2 bis 5, überspringt aber immer 2 indexe [start:end:step]
+    # gibt "en" aus, er geht von index 2 bis 5, überspringt aber immer 2 indexe [start:end:step]
     print(name[2:5:2])
 
-    # => gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String
+    # gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String
     print(name[::-1])
 
-    # => gibt jeweils "KEVIN" und "kevin" aus
+    # gibt jeweils "KEVIN" und "kevin" aus
     print(name.upper())
     print(name.lower())
 
-    # => gibt true und false aus
+    # gibt true und false aus
     print(name.startswith("K"))
     print(name.endswith("asdfasdfasdf"))
 
-    # => macht aus den String mehrere Strings und packt sie in eine Liste, er splittet jeweils an der Leerstelle " "
+    # macht aus den String mehrere Strings und packt sie in eine Liste, er splittet jeweils am Leerzeichen " "
     names = "Kevin Daniel Phillip Tom"
     allnames = names.split(" ")
 ```
@@ -138,59 +144,62 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     # Initialisierungsmethoden einer Liste
     listA = [1, 2, 3]
 
+    my_int = 4
     # Der Liste hinzufügen
-    listA.append(myInt)
+    list_a.append(my_int)
 
     # Listen zusammenfügen,
-    listA = [1, 2, 3]
-    listB = [5, 6, 7]
-    listC = listA + listB
-    print(listC)
-    # => [1, 2, 3, 5, 6, 7]
-
+    list_a = [1, 2, 3]
+    list_b = [5, 6, 7]
+    list_c = list_a + list_b
+    print(list_c)
     print([1, 2, 3] * 3)
-    # => [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+    '''
+    >>> [1, 2, 3, 5, 6, 7]
+    >>> [1, 2, 3, 1, 2, 3, 1, 2, 3]
+    '''
 
     # DICTIONARIES
     # Initialiserungsmethoden eines Dictionarys
     # jeweils Key / Value
-    myDict = {}
-    myDict[1] = "Hallo"
-    myDict[2] = "Ich"
-    myDict[3] = "Bims"
+    my_dict = {}
+    my_dict[1] = "Hallo, "
+    my_dict[2] = "ich"
+    my_dict[3] = "bins"
 
-    myDict = {
-        1 : "Hey"
-        2 : "na"
-        3 : "du"
-        4 : "Giraffe"
+    my_dict = {
+        1: "Hey, "
+        2: "na"
+        3: "du"
+        4: "Giraffe"
     }
 
     # Aus dem Dictionary löschen
-    del myDict[1]
+    del my_dict[1] # löscht den Wert permanent
     # oder
-    myDict.pop(1)
+    my_dict.pop(1) # entfernt den Wert und gibt ihn zurück
 
     # Durch Dictionary iterieren
-    for number, text in myDict.items():
-        print("%d gehört zu %s" % (number, text))
+    for key, val in my_dict.items():
+        print("%d gehört zu %s" % (key, val))
 ```
 
 ### Klassen und Vererbung
 
 ```python
     class Parent:
-        def __init__(self, x): # constructor, self = aktuelle Instanz
-            self.x = x # globale Variable
+        def __init__(self, x): # constructor, self = aktuelle Instanz (equivalent zu this)
+            self.x = x # klassenweite Variable
             y = 10     # lokale Variable
 
         def __add__(self, other): # +-operator
             return self.x + other.x
 
-        def _private(self): # private methode (Unterstrich)
+        def _private_method(self): # private methode (Unterstrich)
             pass
 
-        def my_function(self):
+        def my_method(self):
             print("Hi")
 
         def add_method(self, a, b):
@@ -201,24 +210,46 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
         pass
 
     # Klassenobjekt erzeugen
-    myClass = Parent(5)
-    myClass.my_function()
-    myInt = myClass.x
-    print(myClass.add_method(2, 3))
+    my_class = Child(5)
+    my_class.my_method()
+    my_int = my_class.x
+    print(my_class.add_method(2, 3))
 ```
 
-### Enumerators
+### Generators
 
 ```python
     import random
 
     def lottery():
-        # returns 6 numbers between 1 and 40
+        # gibt nacheinander zufällige Zahlen von 1 bis 49 zuück
         for i in range(6):
-            yield random.randint(1, 40)
+            yield random.randint(1, 50)
 
-        # returns a 7th number between 1 and 15
+        # gibt eine siebte Zahl zwischen 1 und 15 zurück
         yield random.randint(1,15)
+
+    print("for-schleife (1-49)")
+    print(lottery.next())
+    print(lottery.next())
+    print(lottery.next())
+    print(lottery.next())
+    print(lottery.next())
+    print(lottery.next())
+    print("extra aufruf (1-15)")
+    print(lottery.next())
+
+    '''
+    >>> for-schleife (1-49)
+    >>> 1
+    >>> 48
+    >>> 22
+    >>> 19
+    >>> 31
+    >>> 12
+    >>> extra aufruf (1-15)
+    >>> 15
+    '''
 ```
 
 Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Funktion/Feld implementieren ist unklar von welcher Klasse die Funktion geerbt wird
@@ -261,10 +292,43 @@ Decorators funktionieren, indem sie ein delegate zu einer Hilfsfunktion (wrapper
 
 ### Metaklassen
 
+In python jedes Objekt hat eine Klasse zu der sie gehört und damit einen Typen. Klassen sind auch Objekte und haben somit auch einen Typen genannt Metaklasse. Im Normalfall haben Klassen die Metaklasse 'type', man kann ihnen allerdings eine selbst definierte Metaklasse zuweisen.
+
 ```python
-    MyExampleClass = type('ExampleClass', (), {'myInt' : 0, 'myString' : 'hallo'}) # returns a class object
-    print(MyExampleClass)
-    print(MyExampleClass()) # create an instance with the class
+    # Normalfall
+    class Class:
+    my_int = 10
+
+    instance = Class()
+
+    print(type(instance)) # instance ist vom Typ Class
+    print(type(Class)) # Class ist vom Typ Type
+
+    class A(type):
+        def __new__(self, class_name, super_classes, members):
+            return type.__new__(self, class_name, super_classes, members)
+
+    class B(metaclass=A):
+        my_string = 'Foo'
+
+    b = B()
+    print(type(b)) # b ist vom Typ B
+    print(type(B)) # B ist vom Typ A und nicht von Type
+
+```
+
+Klassen können erstellt werden, indem man ein Objekt der Metaklasse instanziiert (im Normalfall mit der type-Funktion).
+
+```python
+    # Standard
+    MyExampleClass = type('ExampleClass', (), {'myInt' : 0, 'myString' : 'hallo'})
+    print(MyExampleClass) # ein Objekt vom Typ type
+    print(MyExampleClass()) # ein Objekt vom Typ MyExampleClass
+
+    # Mit eigener Metaklasse
+    C = A('C', (), {'my_float' : 0.0})
+    print(C) # ein Objekt vom Typ A
+    print(C()) # ein Objekt vom Typ C
 ```
 
 ## Künstliche Intelligenz
