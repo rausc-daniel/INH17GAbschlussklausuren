@@ -225,6 +225,40 @@ Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Fu
 
 ### Decorators
 
+Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müssen.
+
+```python
+    def decorator_function(original_function):
+        # Code hier wird einmal ausgeführt
+        print("Executed on Declaration")
+        def wrapper_function():
+            # Code hier wird bei jedem Funktionsaufruf ausgeführt
+            print("Executed on Call")
+            return original_function()
+        return wrapper_function
+
+    @decorator_function # declaration
+    def display(msg):
+        print(msg)
+
+    # equivalent zu @decorator_function
+    # display = decorator_function(display) # declaration
+
+    display("Foo") # call
+    display("Bar") # call
+
+    '''
+    Output:
+    >>> Executed on Declaration
+    >>> Executed on Call
+    >>> Foo
+    >>> Executed on Call
+    >>> Bar
+    '''
+```
+
+Decorators funktionieren, indem sie ein delegate zu einer Hilfsfunktion (wrapper) zurückgeben, welcher die eigentliche Funktion aufruft und ihre Werte zurückgibt.
+
 ### Metaklassen
 
 ```python

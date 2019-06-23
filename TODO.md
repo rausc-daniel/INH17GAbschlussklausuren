@@ -7,7 +7,7 @@
 * Generelle Syntax :ballot_box_with_check:
 * Collections :ballot_box_with_check:
 * Klassen und Vererbung :ballot_box_with_check:
-* Decorator :negative_squared_cross_mark:
+* Decorator :ballot_box_with_check:
 * Metaklassen :large_orange_diamond:
 
 ### Künstliche Intelligenz :ballot_box_with_check:
