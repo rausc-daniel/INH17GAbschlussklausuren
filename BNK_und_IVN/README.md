@@ -216,7 +216,11 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     print(my_class.add_method(2, 3))
 ```
 
+Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Funktion/Feld implementieren ist unklar von welcher Klasse die Funktion geerbt wird
+
 ### Generators
+
+Generatoren errmöglichen die inkrementelle Ausführung von Funktionen und besonders Schleifen.
 
 ```python
     import random
@@ -251,8 +255,6 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     >>> 15
     '''
 ```
-
-Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Funktion/Feld implementieren ist unklar von welcher Klasse die Funktion geerbt wird
 
 ### Decorators
 
