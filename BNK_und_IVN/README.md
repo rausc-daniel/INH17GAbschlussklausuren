@@ -31,7 +31,7 @@
 
 ## Python
 
-Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt wird und dynamisch typisiert ist
+Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt wird und dynamisch typisiert ist.
 
 ### Generelle Syntax
 
@@ -216,11 +216,11 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     print(my_class.add_method(2, 3))
 ```
 
-Diamantproblem: Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Funktion/Feld implementieren ist unklar von welcher Klasse die Funktion geerbt wird
+Diamantproblem &rarr; Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Funktion/Feld implementieren, ist unklar von welcher Klasse die Funktion geerbt wird
 
 ### Generators
 
-Generatoren errmöglichen die inkrementelle Ausführung von Funktionen und besonders Schleifen.
+Generatoren ermöglichen die inkrementelle Ausführung von Funktionen und besonders Schleifen.
 
 ```python
     import random
@@ -290,11 +290,11 @@ Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müsse
     '''
 ```
 
-Decorators funktionieren, indem sie ein delegate zu einer Hilfsfunktion (wrapper) zurückgeben, welcher die eigentliche Funktion aufruft und ihre Werte zurückgibt.
+Decorators funktionieren, indem sie ein delegate (genannt clusure) zu einer Hilfsfunktion (wrapper) zurückgeben. Der Wrapper ruft die eigentliche Funktion auf und gibt ihre Werte zurück.
 
 ### Metaklassen
 
-In python jedes Objekt hat eine Klasse zu der sie gehört und damit einen Typen. Klassen sind auch Objekte und haben somit auch einen Typen genannt Metaklasse. Im Normalfall haben Klassen die Metaklasse 'type', man kann ihnen allerdings eine selbst definierte Metaklasse zuweisen.
+In python hat jedes Objekt eine Klasse zu der sie gehört und damit einen Typen. Klassen sind auch Objekte und haben somit auch einen Typen, genannt Metaklasse. Im Normalfall haben Klassen die Metaklasse 'type', man kann ihnen allerdings eine selbst definierte Metaklasse zuweisen.
 
 ```python
     # Normalfall
@@ -306,6 +306,7 @@ In python jedes Objekt hat eine Klasse zu der sie gehört und damit einen Typen.
     print(type(instance)) # instance ist vom Typ Class
     print(type(Class)) # Class ist vom Typ Type
 
+    # Eigen Metaklasse
     class A(type):
         def __new__(self, class_name, super_classes, members):
             return type.__new__(self, class_name, super_classes, members)
@@ -322,7 +323,7 @@ In python jedes Objekt hat eine Klasse zu der sie gehört und damit einen Typen.
 Klassen können erstellt werden, indem man ein Objekt der Metaklasse instanziiert (im Normalfall mit der type-Funktion).
 
 ```python
-    # Standard
+    # Normalfall
     MyExampleClass = type('ExampleClass', (), {'myInt' : 0, 'myString' : 'hallo'})
     print(MyExampleClass) # ein Objekt vom Typ type
     print(MyExampleClass()) # ein Objekt vom Typ MyExampleClass
@@ -340,7 +341,7 @@ Klassen können erstellt werden, indem man ein Objekt der Metaklasse instanziier
 #### Verfahren
 
 * symbolisch &rarr; Das Wissen ist im KI-System explizit abgebildet. Dies kann durch Symbole, wie *Freund* oder *Feind* geschehen.
-* subsymbolisch &rarr; Das Wissen ist nicht in Symbolen gespeichert und liegt somit nur in impliziter Form vor, dies ist zum Beispiel der Fall bei neuronalen Netzwerken
+* subsymbolisch &rarr; Das Wissen ist nicht in Symbolen gespeichert und liegt somit nur in impliziter Form vor, dies ist zum Beispiel der Fall bei neuronalen Netzwerken.
 
 #### Typen
 
@@ -386,9 +387,9 @@ Testet, ob eine Maschine menschliches Denkverhalten nachahmen kann. Wenn ein Tes
 
 Die Umgebung in der sich Softwareagenten aufhalten, kann mit den folgen Kriterien beschrieben werden
 
-* Zugänglich &rarr; alle etschidungsrelevanten Teile der Umgebung sind beobachtbat
+* Zugänglich &rarr; Alle etschidungsrelevanten Teile der Umgebung sind beobachtbar
 * Determiniertheit &rarr; Aktionen haben eindeutige Folgen auf die Umgebung
-* Episodisch &rarr; Erfahrung kann in einzelne Episoden (z.B.: Wahrnehmung, Handlung etc.) eingeteilt werden
+* Episodisch &rarr; Erfahrung kann in einzelne Episoden (z.B.: Wahrnehmung, Handlung) eingeteilt werden
 * Statisch &rarr; Umgebung bleibt während der Entschidung unverändert
 * Auflösung &rarr; Ist die Umgebung diskret (fest Größe) oder kontinuirlich
 
@@ -403,7 +404,7 @@ Die Umgebung in der sich Softwareagenten aufhalten, kann mit den folgen Kriterie
 
 Heuristiken sind Methoden bzw. Faustregeln, die genutzt werden können um den Prozess der Entscheidungsfindung von Agenten zu beschreiben
 
-* "most constrained" &rarr; Die Aktion mit den meisten Eischränkungen soll zuerst ausgeführt werden
+* "most constrained" &rarr; Die Aktion mit den meisten Einschränkungen soll zuerst ausgeführt werden
 * "das schwierigste zuert" &rarr; Die Aktion, die die meiste Arbeit benötigt, wird bevorzugt
 * "das erfolgsversprechendste zuerst" &rarr; Die Aktion, die den meisten Nutzen hat, soll zuerst ausgeführt werden.
 
@@ -413,8 +414,8 @@ Heuristiken sind Methoden bzw. Faustregeln, die genutzt werden können um den Pr
 
 Endliche Automaten sind abstrakte Maschinen, die eine feste Anzahl an Zuständen haben und zwischen diesen wechseln (Input &rarr; ZustandA &rarr; ZustandB &rarr; Output) z.B.: Unity Animator.
 
-* Deterministisch &rarr; Verhalten ist eindeutig und konstant nachvollziehbar und vorbestimmt &rarr; leicht zu beherrschen
-* Nicht Deterministisch &rarr; Verhalten ist nicht eindeutig bestimmt und Zufall spielt eine Rolle bei den Übergänge &rarr; realistischer
+* Deterministisch &rarr; Verhalten ist eindeutig, konstant nachvollziehbar und vorbestimmt &rarr; leicht zu beherrschen
+* Nicht Deterministisch &rarr; Verhalten ist nicht eindeutig bestimmt und Zufall spielt eine Rolle bei den Übergängen &rarr; realistischer
 
 ### Behaviour Trees
 
@@ -428,7 +429,7 @@ Neuronale Netze sind Netzwerke von autonom agierenden Recheneinheiten (Neuronen)
 
 Problembeschreibung &rarr; **Netz** &rarr; Problemlösung
 
-Neuronale Netze passen sich in einer Lernphase an die Problemphase an. Dieses Lernen geschieht über die Veränderung des Netzes.
+Neuronale Netze passen sich in einer Lernphase an die Problemstellung an. Dieses Lernen geschieht über die Veränderung des Netzes.
 
 #### Neuronen
 
@@ -438,7 +439,7 @@ Ein Neuron besteht aus mehreren gewichteten Inputs (w0..w1), einem Threshold (T)
 
 * Inputs &rarr; Die Inputs kommen von den Neuronen in der vorherigen Schicht und werden einzeln gewichtet.
 * Threshold &rarr; Ist die Summe der Inputs größer als der Threshold, feuert das Neuron. Der Threshold kann ein Schwellenwert sein, oder durch eine Aktivierungsfunktion bestimmt werden.
-* Output &rarr; Der Output ist ein binärer Wert (feuert / feuert nicht) oder das Ergebnis der Aktivierungsfunktion. Er wird alle alle Neuronen in der nächsten Schicht weitergeleitet
+* Output &rarr; Der Output ist ein binärer Wert (feuert / feuert nicht) oder das Ergebnis der Aktivierungsfunktion. Er wird an alle Neuronen in der nächsten Schicht weitergeleitet
 
 ![Aufbau eines Neurons](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/neuron.png)
 
@@ -454,7 +455,7 @@ Die Topologie eines Netzes beschreibt seinen Aufbau. Bestandteile hiervon sind d
 
 #### Lernvorgänge
 
-Neuronale Netze können auf diverse Arten lernen. Die zwei wichtigsten sind die Veränderung der Netztopologie und die Anpassung von Gewichtungen der einzelnen Verbindungen.
+Neuronale Netze können auf diverse Arten lernen. Die zwei wichtigsten sind die Veränderung der Netztopologie (z.B. durch genetische Algorithmen) und die Anpassung von Gewichtungen der einzelnen Verbindungen.
 
 ##### Lernparadigmen
 
@@ -470,7 +471,7 @@ Die Delta Regel ist eine der wichtigsten Lernmethoden des supervised learning. S
 
 ![Delta Regel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/delta.png)
 
-Der beliebtiste Algorithmus zur Anwendung der Delta-Regel ist die Backpropagation. Hier wird das Netz solange rückwärts iteriert bis die Quelle des Fehlers gefunden wurde und währenddessen für jede Verbindung die Delta-Regel angewandt.
+Der beliebtiste Algorithmus zur Anwendung der Delta-Regel ist die *Backpropagation*. Hier wird das Netz solange rückwärts iteriert bis die Quelle des Fehlers gefunden wurde und währenddessen für jede Verbindung die Delta-Regel angewandt.
 
 ##### Hebb'sche-Regel
 
@@ -480,23 +481,26 @@ Die Hebb'sche Regel ist eine Lernregel für zirkulare Netze, die ihren Output we
 
 #### Nicht linear Separierbare Probleme und zusätliche Schichten
 
-In neuronalen Netzwerken generiert jede Schicht eine Gerade (bei mehreren Parametern Hyperebene genannt), die zwei Gruppen voneinander trennt. Hat man allerdings mehr als zwei Gruppen oder sind zwei Gruppen speziell angeordnet reicht eine gerade nicht mehr aus um diese zu trennen. In diesem Fall fügt man dem Netz mehr Schichten hinzu und hat somit mehr geraden zur Verfügung.
+In neuronalen Netzwerken generiert jede Schicht eine Gerade (bei 3 Parametern Hyperebene genannt), die zwei Gruppen voneinander trennt. Hat man allerdings mehr als zwei Gruppen oder sind zwei Gruppen speziell angeordnet reicht eine Gerade nicht mehr aus um diese zu trennen. In diesem Fall fügt man dem Netz mehr Schichten hinzu und hat somit mehr Geraden zur Verfügung.
 
 ![Nichtliniare Separierbarkeit](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/multiple_layers.png)
 
 ## XML
 
-XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hierarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut verstanden werden. XML erlaubt es mehrere verschiedene Dialekte im gleichen Dokument zu habel, sofern jeder mit einem eindeutigen Prefix ausgewiesen wird.
+XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung von Daten in hierarchischen Strukturen. XML kann sowohl von Menschen, als auch von Maschinen gut *verstanden* werden. XML erlaubt es mehrere verschiedene Dialekte im gleichen Dokument zu haben, sofern jeder mit einem eindeutigen Prefix ausgewiesen wird.
 
 ### Generelles
 
 ```xml
     <!-- Jede XML-Datei sollte diesen Header haben -->
     <?xml version="1.0" encoding="utf-8"?>
-    <!-- Daten, die die Datei hält -->
-    <Node attribute="value">
-        Text
-    </Node>
+    <!-- Namespace des Dokuments und sein Prefix -->
+    <c:Namespace xmlns:c="namespace">
+        <!-- Daten, die die Datei hält -->
+        <c:Node attribute="value">
+            Text
+        </c:Node>
+    </c:Namespace>
 ```
 
 ### SVG
@@ -509,7 +513,7 @@ SMIL steht für Synchronized Multimedia Integration Language und ist ein XML-Dia
 
 ### XSD
 
-XSD steht für XML Schema Definition und wird dazu genutzt, den Aufbau einer XML-Datei, sowie die Datentypen der ihrer Attribute zu validieren.
+XSD steht für XML Schema Definition und wird dazu genutzt, den Aufbau einer XML-Datei, sowie die Datentypen ihrer Attribute zu validieren.
 
 ```xml
     <!-- Namespace -->
@@ -521,7 +525,7 @@ XSD steht für XML Schema Definition und wird dazu genutzt, den Aufbau einer XML
 Einfache Typen sind atomare Datentypen. Dies bedeutet hier, dass sie keine Elemente unter sich haben können (Leaf Nodes)
 
 ```xml
-    <simpleType name="monatInt"></simpleType>
+    <simpleType name="monat"></simpleType>
 ```
 
 #### Komplexe Typen
@@ -541,7 +545,7 @@ Komplexe Typen sind Datentypen, die Child-Nodes haben können.
 
 #### Elemente
 
-Elemente sind die eigentlichen XML-Nodes, die der Nutzer in der XML-Datei verwenden kann, sie können von einem vordefinierten Typen sein, müssen sonst aber einem Typen zugewiesen werden
+Elemente sind die eigentlichen XML-Nodes, die der Nutzer in der XML-Datei verwenden kann. Sie können von einem vordefinierten Typen sein, müssen sonst aber einem Typen zugewiesen werden
 
 ```xml
     <element type="pc-Typ" name="PC"/>
@@ -598,6 +602,7 @@ Bestehende Typen können außerdem weiter eingeschränkt werden. Hierzu müssen 
 Schematron ist eine Möglichkeit Unit Tests für XML-Dateien zu schreiben. Sie validieren somit den Inhalt der Tags und nicht den Aufbau der XML-Datei
 
 ```xml
+    <!-- Namespace -->
     <schema xmlns="http://purl.oclc.org/dsdl/schematron">
 ```
 
@@ -625,12 +630,13 @@ Patterns sind eine Möglichkeit seine Unit-Tests zu gruppieren, während man mit
 ```xml
     <let name="name" value="val"/>
 
-    <!-- Aufruf mit $name -->
+    <!-- Aufruf -->
+    <assert test="x=$name">Nachricht, wenn der Test fehlschlägt</assert>
 ```
 
 ### XSLT
 
-XSLT steht für eXtensible Stylesheet Language Transformations und ist ein XML-Dialekt, der es erlaubt jede belibige XML-Datei wie XHTML zu behandeln.
+XSLT steht für Extensible Stylesheet Language Transformations und ist ein XML-Dialekt, der es erlaubt jede belibige XML-Datei wie XHTML zu behandeln.
 
 ```xml
     <stylesheet version="1.0" xmlns="http://www.w3.org/1999/XSL/Transform">
@@ -666,7 +672,7 @@ XSLT steht für eXtensible Stylesheet Language Transformations und ist ein XML-D
 
 ### DTD
 
-DTD steht für Document Type Definition und wird genutzt um die Struktur, die Verschachtelung und den Inhalt von XML-Dokumenten zu definieren. Es deklariert somit einen wiederverwndbaren Dokumenttypen.
+DTD steht für Document Type Definition und wird genutzt um die Struktur, die Verschachtelung und den Inhalt von XML-Dokumenten zu definieren. Es deklariert somit einen wiederverwendbaren Dokumenttypen.
 
 ### XPath XLink XQuery
 
@@ -697,10 +703,10 @@ XPath ist eine Abfragesprache, die dazu dient Elemente in einem XML-Dokument zu 
 
 ### Ajax
 
-Ajax steht für Asynchronous JavaScript and XML und ermöglicht es asynchronde Anfragen an einen Webserver zu senden und die aktuelle HTML-Seite zu verändern ohne sie neu zu laden.
+Ajax steht für Asynchronous JavaScript and XML und ermöglicht es asynchrone Anfragen an einen Webserver zu senden und die aktuelle HTML-Seite zu verändern ohne sie neu zu laden.
 
 ## Verschiedenes
 
 ### Vim
 
-*Vim* ist ein mit Plugins erweiterbarer Texteditor, der in den 80ern entwickelt wurde. *Vim* ist auf allen Unix-Systemen (Linux, MacOS) vorinstalliert und läuft sowohl als eigenständiges Programm als auch in der Kommandozeile und über SSH-Verbindungen.
+*Vim* ist ein mit Plugins erweiterbarer Texteditor, der in den 1980ern entwickelt wurde. *Vim* ist auf allen Unix-Systemen (Linux, MacOS) vorinstalliert und läuft sowohl als eigenständiges Programm als auch in der Kommandozeile und über SSH-Verbindungen.
