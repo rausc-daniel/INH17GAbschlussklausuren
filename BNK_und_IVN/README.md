@@ -699,7 +699,11 @@ XPath ist eine Abfragesprache, die dazu dient Elemente in einem XML-Dokument zu 
 
 #### XLink
 
+Mit XLink lassen sich Verlinkungen zu anderen Dateien oder Websites in XML-Dokumente einbinden.
+
 #### XQuery
+
+XQuery ist eine Abfragesprache für XML-Dateien, die syntaktisch und inhaltlich SQL ähnelt.
 
 ### Ajax
 

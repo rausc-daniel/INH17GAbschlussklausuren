@@ -19,7 +19,7 @@
 * Behaviour Trees :ballot_box_with_check:
 * Neuronale Netzwerke :ballot_box_with_check:
 
-### XML :large_orange_diamond:
+### XML :ballot_box_with_check:
 
 * Generelles :ballot_box_with_check:
 * SVG :ballot_box_with_check:
@@ -28,7 +28,7 @@
 * Schematron :ballot_box_with_check:
 * Transformation (XSLT) :ballot_box_with_check:
 * Document Type Definition (DTD) :ballot_box_with_check:
-* XPath, XLink, XQuery :large_orange_diamond:
+* XPath, XLink, XQuery :ballot_box_with_check:
 * Ajax :ballot_box_with_check:
 
 ### Verschiedenes :ballot_box_with_check:
