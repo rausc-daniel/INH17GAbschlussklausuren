@@ -7,6 +7,7 @@
   * [Collections](#collections)
   * [Klassen und Vererbung](#klassen-und-vererbung)
   * [Generators](#generators)
+  * [Doctests](#doctests)
   * [Decorator](#decorators)
   * [Metaklassen](#metaklassen)
 * [Künstliche Intelligenz](#künstliche-intelligenz)
@@ -255,6 +256,8 @@ Generatoren ermöglichen die inkrementelle Ausführung von Funktionen und besond
     >>> 15
     '''
 ```
+
+### Doctests
 
 ### Decorators
 
