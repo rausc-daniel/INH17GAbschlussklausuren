@@ -502,6 +502,34 @@ Der Aufbau von neuronales Netzen orientiert sich an der Struktur von Nervensyste
 
 ![Biologie als Vorbild](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/biology.png)
 
+##### Programmbeispiel
+
+```python
+    class Neuron():
+
+    weights = []
+
+    def __init__(self, threshold, inputs, weights = None):
+        self.threshold = threshold
+        self.neurons = inputs
+        if weights is None:
+            for i in len(self.neurons):
+                self.weights[i] = randrange(-1, 1)
+        else:
+            self.weights = weights
+
+    def evaluate(self):
+        res = 0
+        for i in range(len(self.neurons)):
+            res = res + (self.weights[i] * self.neurons[i].fire())
+        return res
+
+    def fire(self):
+        if self.evaluate() > self.threshold:
+            return 1
+        return 0
+```
+
 #### Topologie
 
 Die Topologie eines Netzes beschreibt seinen Aufbau. Bestandteile hiervon sind die Anzahl der Schichten, wie viele Neuronen jede Schicht enthält und welche Neuronen mit welchen Anderen verbunden sind. Außerdem beschreibt sie wie viele Input- und Output-Neuronen das Netz hat.
