@@ -261,9 +261,10 @@ Generatoren ermöglichen die inkrementelle Ausführung von Funktionen und besond
 
 ### Decorators
 
-Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müssen.
+Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müssen. Sie können als Funktionen oder als Klassen deklariert werden.
 
 ```python
+    # Als Funktion
     def decorator_function(original_function):
         # Code hier wird einmal ausgeführt
         print("Executed on Declaration")
@@ -276,12 +277,40 @@ Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müsse
     @decorator_function # declaration
     def display(msg):
         print(msg)
-
-    # equivalent zu @decorator_function
+    
+    # equivalent zu @decorator_function:
     # display = decorator_function(display) # declaration
 
     display("Foo") # call
     display("Bar") # call
+
+    '''
+    Output:
+    >>> Executed on Declaration
+    >>> Executed on Call
+    >>> Foo
+    >>> Executed on Call
+    >>> Bar
+    '''
+
+    # Als Klasse
+    class DecoratorClass():
+        def __init__(self, original_function):
+            # Code hier wird einmal ausgeführt
+            print("Executed on Declaration")
+            self.original_function = original_function
+
+        def __call__(self, param):
+            # Code hier wird bei jedem Funktionsaufruf ausgeführt
+            print("Executed on Call")
+            return self.original_function(param)
+
+    @DecoratorClass # declaration
+    def display(msg):
+        print(msg)
+
+    display("foo")
+    display("bar")
 
     '''
     Output:
