@@ -8,7 +8,7 @@
 * Collections :ballot_box_with_check:
 * Klassen und Vererbung :ballot_box_with_check:
 * Generators :ballot_box_with_check:
-* Doctests :large_orange_diamond:
+* Doctests :negative_squared_cross_mark:
 * Decorator :ballot_box_with_check:
 * Metaklassen :ballot_box_with_check:
 

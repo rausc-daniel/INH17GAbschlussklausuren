@@ -298,7 +298,7 @@ Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müsse
     @decorator_function # declaration
     def display(msg):
         print(msg)
-    
+
     # equivalent zu @decorator_function:
     # display = decorator_function(display) # declaration
 
