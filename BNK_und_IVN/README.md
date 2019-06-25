@@ -257,6 +257,27 @@ Generatoren ermöglichen die inkrementelle Ausführung von Funktionen und besond
     '''
 ```
 
+Generators können außerdem genutzt werden um in kürzerer Schreibweise Listen zu erstellen/befüllen
+
+```python
+    my_list = [x * 2 for x in range(8)]
+
+    print(my_list)
+
+    '''
+    >>> [0, 2, 4, 6, 8, 10, 12, 14]
+    '''
+
+    # mit Bedingung
+    my_list = [x * 2 for x in range(8) if x % 2 is 0]
+
+    print(my_list)
+
+    '''
+    >>> [0, 4, 8, 12]
+    '''
+```
+
 ### Doctests
 
 ### Decorators
