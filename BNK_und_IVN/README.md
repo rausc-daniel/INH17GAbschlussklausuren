@@ -323,7 +323,7 @@ Generators können außerdem genutzt werden um in kürzerer Schreibweise Listen 
 
 ### Doctests
 
-Das doctest Modul ermöglichen es Unit Tests in der Inline-Documentation einer Funktion zu definieren und auszuführen.
+Das doctest Modul ermöglicht es Unit Tests in der Inline-Documentation einer Funktion zu definieren und auszuführen.
 
 ```python
 def fib(n):

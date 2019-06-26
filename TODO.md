@@ -2,13 +2,13 @@
 
 ## BNK und IVN :large_orange_diamond:
 
-### Python :large_orange_diamond:
+### Python :ballot_box_with_check:
 
 * Generelle Syntax :ballot_box_with_check:
 * Collections :ballot_box_with_check:
 * Klassen und Vererbung :ballot_box_with_check:
 * Generators :ballot_box_with_check:
-* Doctests :negative_squared_cross_mark:
+* Doctests :ballot_box_with_check:
 * Decorator :ballot_box_with_check:
 * Metaklassen :ballot_box_with_check:
 

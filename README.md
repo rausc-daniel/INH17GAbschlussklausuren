@@ -2,7 +2,7 @@
 
 ## Inhalt
 
-* [BNK und IVN](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/BNK_und_IVN) :large_orange_diamond:
+* [BNK und IVN](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/BNK_und_IVN) :ballot_box_with_check:
   * Python
   * Künstliche Intelligenz
   * XML
