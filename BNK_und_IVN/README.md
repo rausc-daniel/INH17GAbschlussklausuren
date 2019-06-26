@@ -104,16 +104,16 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
     # gibt 5 aus weil 5 Zeichen
     print(len(name))
 
-    # gibt 3 aus weil "v" an dritter Stelle
+    # gibt 2 aus weil "v" an dritter Stelle
     print(name.index("v"))
 
     # gibt 1 aus weil nur einmal "K" im string vorkommt
     print(name.count("K"))
 
-    # gibt "evi" aus, er geht von Anfangsindex bis zum Endindex [start:end], negativ numbers gehen vom ende des strings aus, z.B. -3 -> dritte stelle von rechts
+    # gibt "vi" aus, er geht von Anfangsindex bis zum Endindex(exclusive) [start:end], negative Indices gehen vom Ende des strings aus, z.B. -3 -> dritte stelle von rechts
     print(name[2:4])
 
-    # gibt "en" aus, er geht von index 2 bis 5, überspringt aber immer 2 indexe [start:end:step]
+    # gibt "vn" aus, er geht von index 2 bis 5, und nimmt jeden zweiten Buchstaben [start:end:step]
     print(name[2:5:2])
 
     # gibt "niveK" aus, er geht einfach von Start bis Ende rückwärts durch, wenn die Variablen leer gelassen werden, nimmt er den Anfang und Ende vom gesamten String
