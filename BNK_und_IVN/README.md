@@ -622,9 +622,9 @@ Neuronale Netze können auf diverse Arten lernen. Die zwei wichtigsten sind die 
 
 Die Delta Regel ist eine der wichtigsten Lernmethoden des supervised learning. Sie ist für Feed-Forward-Netze gedacht, also Netze, die ihren Output nicht weiterverarbeiten. Sie funktioniert indem der Ist-Output von jedem Neuron mit seinem Soll-Ouput verglichen wird und bei Abweichungen angepasst wird. Die Anpassung geschieht mithilfe eines Lernfaktors an den Gewichten der einzelnen Verbindungen.
 
-![Delta Regel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/delta.png)
+![Delta Regel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/delta.png)
 
-[Programmbeispiel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/neural_network.py) und [Test Script](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/test.py)
+[Programmbeispiel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/neural_network.py) und [Test Script](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/test.py)
 
 Der beliebtiste Algorithmus zur Anwendung der Delta-Regel ist die *Backpropagation*. Hier wird das Netz solange rückwärts iteriert bis die Quelle des Fehlers gefunden wurde und währenddessen für jede Verbindung die Delta-Regel angewandt.
 
@@ -632,9 +632,9 @@ Der beliebtiste Algorithmus zur Anwendung der Delta-Regel ist die *Backpropagati
 
 Die Hebb'sche Regel ist eine Lernregel für zirkulare Netze, die ihren Output weiterverarbeiten und ist somit für unsupervised learning gedacht. Sie belohnt Verbindungen, bei denen beide Neuronen feuern indem das Gewicht dieser Verbindung erhöht wird. Alle anderen Kombinationen bleiben unberührt.
 
-![Hebb'sche Regel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/hebb.png)
+![Hebb'sche Regel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/hebb.png)
 
-[Programmbeispiel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/neural_network.py) und [Test Script](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/img/test.py)
+[Programmbeispiel](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/neural_network.py) und [Test Script](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/BNK_und_IVN/test.py)
 
 #### Nicht linear Separierbare Probleme und zusätliche Schichten
 
