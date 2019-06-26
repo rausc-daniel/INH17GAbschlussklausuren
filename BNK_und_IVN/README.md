@@ -323,6 +323,35 @@ Generators können außerdem genutzt werden um in kürzerer Schreibweise Listen 
 
 ### Doctests
 
+Das doctest Modul ermöglichen es Unit Tests in der Inline-Documentation einer Funktion zu definieren und auszuführen.
+
+```python
+def fib(n):
+    """
+    Die Fibonacci-Zahl für die n-te
+    Generation wird iterativ berechnet
+
+    >>> fib(0)  # test
+    0           # erwartetes Ergebnis
+    >>> fib(1)
+    1
+    >>> fib(10)
+    55
+    >>> fib(15)
+    610
+    >>>
+
+    """
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+```
+
 ### Decorators
 
 Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müssen. Sie können als Funktionen oder als Klassen deklariert werden.
