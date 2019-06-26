@@ -190,31 +190,30 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
 
 ```python
     class Parent:
-        def __init__(self, x): # constructor, self = aktuelle Instanz (equivalent zu this)
-            self.x = x # klassenweite Variable
-            y = 10     # lokale Variable
+    x = 10 # klassenweite Variable, die vererbt werden kann
 
-        def __add__(self, other): # +-operator
-            return self.x + other.x
+    def __init__(self, y): # constructor, self = aktuelle Instanz (equivalent zu this)
+        self.y = y  # klassenweite Variable
+        y = 10     # lokale Variable
 
-        def _private_method(self): # private methode (Unterstrich)
-            pass
+    def __add__(self, other):  # +-operator
+        return self.y + other.y
 
-        def my_method(self):
-            print("Hi")
-
-        def add_method(self, a, b):
-            return a + b
-
-    class Child(Parent): # Child erbt von Parent
-        self.y = super.x # super = instanz der Elternklasse
+    def _private_method(self):  # private methode (Unterstrich)
         pass
 
-    # Klassenobjekt erzeugen
-    my_class = Child(5)
-    my_class.my_method()
-    my_int = my_class.x
-    print(my_class.add_method(2, 3))
+    def my_method(self):
+        print("Hi")
+
+    def add_method(self, a, b):
+        return a + b
+
+
+    class Child(Parent):  # Child erbt von Parent
+        def __init__(self, y):
+            Parent.__init__(self, y) # Constructor muss den Constructor der Elternklasse aufrufen
+
+            self.y = super().x  # super() = instanz der Elternklasse (nur in Funktionen verwendbar)
 ```
 
 Diamantproblem &rarr; Wenn eine Klasse von zwei Klassen erbt, die beide die gleiche Funktion/Feld implementieren, ist unklar von welcher Klasse die Funktion geerbt wird
