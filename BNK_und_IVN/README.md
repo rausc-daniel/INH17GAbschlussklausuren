@@ -186,6 +186,50 @@ Python ist eine interpretierte Programmiersprache, die als Skriptsprache genutzt
         print("%d gehört zu %s" % (key, val))
 ```
 
+Mehrere Collections vom gleichen Typ können zu einer Collection gepackt und wieder entpackt werden. Die zip-Funktion erstellt solange Tupel bis eine der Listen leer ist, es können also Werte einer Liste verloren gehen.
+
+```python
+    list_a = [1, 2, 3]
+    list_b = ["a", "b", "c"]
+
+    zipped_list = zip(list_a, list_b) # ergibt ein zip-Objekt, das zu jeder Collection konvertiert werden kann
+    print(list(zipped_list))
+
+    zipped_list = zip(list_a, list_b)
+    print(tuple(zipped_list))
+
+    zipped_list = zip(list_a, list_b)
+    print(set(zipped_list))
+
+    zipped_list = zip(list_a, list_b)
+    print(dict(zipped_list))
+
+    '''
+    >>> [(1, 'a'), (2, 'b'), (3, 'c')]
+    >>> ((1, 'a'), (2, 'b'), (3, 'c'))
+    >>> {(1, 'a'), (2, 'b'), (3, 'c')}
+    >>> {1: 'a', 2: 'b', 3: 'c'}
+    '''
+```
+
+Zip-Objekte können mithilfe von for-Schleifen automatisch entpackt werden.
+
+```python
+    list_a = [1, 2, 3]
+    list_b = ["a", "b", "c"]
+
+    zipped_list = zip(list_a, list_b)
+
+    for a, b in zipped_list:
+        print(f"tuple made of {a} and {b}")
+
+    '''
+    >>> tuple made of 1 and a
+    >>> tuple made of 2 and b
+    >>> tuple made of 3 and c
+    '''
+```
+
 ### Klassen und Vererbung
 
 ```python
