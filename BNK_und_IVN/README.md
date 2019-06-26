@@ -289,10 +289,10 @@ Decorators erlauben es eine Funktion zu erweitern, ohne sie verändern zu müsse
     def decorator_function(original_function):
         # Code hier wird einmal ausgeführt
         print("Executed on Declaration")
-        def wrapper_function():
+        def wrapper_function(msg):
             # Code hier wird bei jedem Funktionsaufruf ausgeführt
             print("Executed on Call")
-            return original_function()
+            return original_function(msg)
         return wrapper_function
 
     @decorator_function # declaration
