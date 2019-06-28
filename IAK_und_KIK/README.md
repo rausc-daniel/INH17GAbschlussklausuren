@@ -176,31 +176,16 @@ Websites benötigen oft Daten, die nicht in HTML abgebildet werden können. In H
             <input type="date" name="" id="">
         </fieldset>
         <fieldset>
-            <input type="checkbox" name="" id="" value="true">
-            <input type="radio" name="radio" id="" value="1" checked>
-            <input type="radio" name="radio" id="" value="2">
-            <input type="radio" name="radio" id="" value="3">
+            <label>Checkbox<input type="checkbox" name="" id="" value="true"></label>
+            <label>Radio Button 1<input type="radio" name="radio" id="" value="1" checked></label>
+            <label>Radio Button 2<input type="radio" name="radio" id="" value="2"></label>
+            <label>Radio Button 3<input type="radio" name="radio" id="" value="3"></label>
             <input type="submit" name="" id="" value="Abschicken">
         </fieldset>
     </form>
 ```
 
-<form action="#" method="get|post">
-    <fieldset>
-        <input type="text" name="" id="" placeholder="Text" autofocus> <br />
-        <input type="email" name="" id="" placeholder="E-Mail"> <br />
-        <input type="tel" name="" id="" placeholder="Telefonnummer"> <br />
-        <input type="password" name="" id="" placeholder="Passwort"> <br />
-        <input type="date" name="" id=""> <br />
-    </fieldset>
-    <fieldset>
-        <label>Checkbox <input type="checkbox" name="" id=""></label> <br />
-        <label>Radio Button 1<input type="radio" name="radio" id="" checked></label> <br />
-        <label>Radio Button 2<input type="radio" name="radio" id=""></label> <br />
-        <label>Radio Button 3<input type="radio" name="radio" id=""></label> <br />
-        <input type="submit" name="" id="" value="Abschicken">
-    </fieldset>
-</form>
+![Form](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/IAK_und_KIK/img/form.png)
 
 ### Semantische Container
 
