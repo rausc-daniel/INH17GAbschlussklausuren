@@ -1,6 +1,6 @@
 # TODO
 
-## BNK und IVN :large_orange_diamond:
+## BNK und IVN :ballot_box_with_check:
 
 ### Python :ballot_box_with_check:
 
@@ -36,7 +36,40 @@
 
 * Vim :ballot_box_with_check:
 
-## IAK und KIK :negative_squared_cross_mark:
+## IAK und KIK :large_orange_diamond:
+
+### HTML :negative_squared_cross_mark:
+
+* Aufbau einer HTML-Datei :negative_squared_cross_mark:
+* Einbinden von Dateien :negative_squared_cross_mark:
+* Allgemein wichtige Tags :negative_squared_cross_mark:
+* Formulare :negative_squared_cross_mark:
+* Semantische Container :negative_squared_cross_mark:
+
+### CSS :negative_squared_cross_mark:
+
+* Selektoren :negative_squared_cross_mark:
+* Allgemein wichtige Attribute :negative_squared_cross_mark:
+* Positionierung :negative_squared_cross_mark:
+* Pseudoklassen und Pseudoselektoren :negative_squared_cross_mark:
+* Responsive Design :negative_squared_cross_mark:
+
+### JavaScript :negative_squared_cross_mark:
+
+* Generelle Syntax :negative_squared_cross_mark:
+* Listen und Objekte :negative_squared_cross_mark:
+* Constructor Functions :negative_squared_cross_mark:
+* Intervalle :negative_squared_cross_mark:
+
+### JQuery :negative_squared_cross_mark:
+
+* Objekte Selektieren :negative_squared_cross_mark:
+* Seiteninhalt und Style modifizieren :negative_squared_cross_mark:
+* Maus- und Tastatur-Input :negative_squared_cross_mark:
+* Attribute und Klassen :negative_squared_cross_mark:
+* Formulare :negative_squared_cross_mark:
+
+### Canvas
 
 ## MIM :negative_squared_cross_mark:
 

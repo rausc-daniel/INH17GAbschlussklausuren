@@ -6,11 +6,11 @@
   * Python
   * Künstliche Intelligenz
   * XML
-* [IAK und KIK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/IAK_und_KIK) :negative_squared_cross_mark:
+* [IAK und KIK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/IAK_und_KIK) :large_orange_diamond:
   * HTML
   * CSS
   * jQuery
-  * Node
+  * Canvas
 * [MIM](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MIM) :negative_squared_cross_mark:
   * C++
   * GLSL
@@ -18,6 +18,7 @@
   * ???
 * [SSK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/SSK) :negative_squared_cross_mark:
   * ???
+  
 ## TODO
 
 [List](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/TODO.md)
