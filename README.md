@@ -13,7 +13,6 @@
   * Canvas
 * [MIM](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MIM) :negative_squared_cross_mark:
   * C++
-  * GLSL
 * [MKG](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MKG) :negative_squared_cross_mark:
   * ???
 * [SSK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/SSK) :negative_squared_cross_mark:
