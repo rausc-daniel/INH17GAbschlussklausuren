@@ -38,13 +38,13 @@
 
 ## IAK und KIK :large_orange_diamond:
 
-### HTML :negative_squared_cross_mark:
+### HTML :ballot_box_with_check:
 
-* Aufbau einer HTML-Datei :negative_squared_cross_mark:
-* Einbinden von Dateien :negative_squared_cross_mark:
-* Allgemein wichtige Tags :negative_squared_cross_mark:
-* Formulare :negative_squared_cross_mark:
-* Semantische Container :negative_squared_cross_mark:
+* Aufbau einer HTML-Datei :ballot_box_with_check:
+* Einbinden von Dateien :ballot_box_with_check:
+* Allgemein wichtige Tags :ballot_box_with_check:
+* Formulare :ballot_box_with_check:
+* Semantische Container :ballot_box_with_check:
 
 ### CSS :negative_squared_cross_mark:
 
