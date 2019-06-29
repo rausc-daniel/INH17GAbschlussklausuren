@@ -46,12 +46,12 @@
 * Formulare :ballot_box_with_check:
 * Semantische Container :ballot_box_with_check:
 
-### CSS :negative_squared_cross_mark:
+### CSS :large_orange_diamond:
 
-* Selektoren :negative_squared_cross_mark:
-* Allgemein wichtige Attribute :negative_squared_cross_mark:
-* Positionierung :negative_squared_cross_mark:
-* Pseudoklassen und Pseudoselektoren :negative_squared_cross_mark:
+* Selektoren :ballot_box_with_check:
+* Allgemein wichtige Attribute :ballot_box_with_check:
+* Positionierung :ballot_box_with_check:
+* Pseudoklassen und Pseudoselektoren :ballot_box_with_check:
 * Responsive Design :negative_squared_cross_mark:
 
 ### JavaScript :negative_squared_cross_mark:
