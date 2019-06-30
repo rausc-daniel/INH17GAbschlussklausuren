@@ -17,7 +17,7 @@
 * [JavaScript](#javascript)
   * [Constructor Functions](#constructor-functions)
   * [Intervalle](#intervalle)
-* [JQuery](#jquery)
+* [jQuery](#jquery)
   * [Objekte Selektieren](#objekte-selektieren)
   * [Seiteninhalt und Style modifizieren](#seiteninhalt-und-style-modifizieren)
   * [Maus und Tastaturinput](#maus-und-tastaturinput)
@@ -506,14 +506,119 @@ Soll ein Intervall so oft wie möglich ausgeführt werden kann die *requestAnima
     window.requestAnimationFrame(step);
 ```
 
-## JQuery
+## jQuery
+
+jQuery ist eine JavaScript Bibliothek, die häufig zusammen genutzte Befehle in Funktionen bündelt und somit DOM-Manipulation erleichtert und schneller macht.
+jquery kann entweder im *&lt;head&gt;* oder am Ende des *&lt;body&gt;* Tags eingebunden werden. Wird es im *&lt;head&gt;* eingebunden muss darauf gewartet werden, dass die komplette Website geladen ist.
+
+```js
+    $(document).ready(function(){
+        /* Hier der jQuery-Code */
+    });
+
+    // Kurzschreibweise
+    $(() => {
+        /* Hier der jQuery-Code */
+    });
+```
 
 ### Objekte Selektieren
 
+Um DOM-Objekte zu selektieren und in JQuery-Objekte zu transformieren nutzt man die *$*-Funktion;
+
+```js
+    var obj = $("css-Selektor");
+
+    // Fenster
+    var win = $(window);
+
+    // sichtbarer Inhalt
+    var doc = $(document)
+
+    // Wenn es von einem Elemt mehrere gibt kann über die Liste iteriert werden
+    $("element").each((index) => {
+        var current = $(this);
+    })
+```
+
 ### Seiteninhalt und Style modifizieren
+
+```js
+    // HTML auslesen
+    var html = $("element").html();
+    // HTML setzen
+    $("element").html("text");
+
+    // Elemente dynamisch erzeugen
+    var elem = $("<tag></tag>");
+    // Element anhängen
+    $("body").prepend(elem);
+    $("body").append(elem);
+
+    // Style auslesen
+    var style = $("element").css("rulename");
+    // Eine Style-Rule setzen
+    $("element").css("rulename", "rulewert");
+    // Mehrere Style-Rules setzen
+    $("element").css({
+        "rulename": "rulewert",
+        "rulename": "rulewert"
+        });
+```
 
 ### Maus und Tastaturinput
 
+```js
+    // Maus auf einem Element
+    $("element").click(() => { });
+    $("element").dblclick(() => { });
+
+    $("element").mousedown(() => { });
+    $("element").mouseup(() => { });
+
+    $("element").mousemove(() => { });
+
+    $("element").mouseover(() => { });
+    $("element").mouseout(() => { });
+
+    // Tastatur
+    $(document).keydown(e => { });
+    $(document).keypress(e => { });
+    $(document).keyup(e => {
+        var keyCode = e.which;
+    });
+```
+
 ### Attribute und Klassen
 
+```js
+    // Attribut auslesen
+    var attr = $("element").attr("attributname")
+    // Ein Attribut setzen
+    $("element").attr("attributname", "attributwert")
+    // Mehrere Attribute setzen
+    $("element").attr({
+        "attributname": "attributwert",
+        "attributname": "attributwert"
+        });
+    // Das value-Attribut hat einen shorhand
+    var val = $("element").val();
+
+    // Klasse hinzufügen
+    $("element").addClass("klassenname");
+    // Klasse entfernen
+    $("element").removeClass("klassenname");
+    // Klasse togglen
+    $("element").toggleClass("klassenname");
+```
+
 ### Formulare auslesen
+
+```js
+    $("input[type=text]").val();
+    $("select").val();
+    $("input[type=radio]:checked").val();
+    $("input[type=checkbox]:checked").each(() => {
+        text += $(this).val() + " ";
+    });
+```

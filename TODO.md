@@ -59,13 +59,13 @@
 * Constructor Functions :ballot_box_with_check:
 * Intervalle :ballot_box_with_check:
 
-### JQuery :negative_squared_cross_mark:
+### JQuery :ballot_box_with_check:
 
-* Objekte Selektieren :negative_squared_cross_mark:
-* Seiteninhalt und Style modifizieren :negative_squared_cross_mark:
-* Maus- und Tastatur-Input :negative_squared_cross_mark:
-* Attribute und Klassen :negative_squared_cross_mark:
-* Formulare :negative_squared_cross_mark:
+* Objekte Selektieren :ballot_box_with_check:
+* Seiteninhalt und Style modifizieren :ballot_box_with_check:
+* Maus- und Tastatur-Input :ballot_box_with_check:
+* Attribute und Klassen :ballot_box_with_check:
+* Formulare :ballot_box_with_check:
 
 ### Canvas
 
