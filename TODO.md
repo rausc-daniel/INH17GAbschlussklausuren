@@ -46,13 +46,13 @@
 * Formulare :ballot_box_with_check:
 * Semantische Container :ballot_box_with_check:
 
-### CSS :large_orange_diamond:
+### CSS :ballot_box_with_check:
 
 * Selektoren :ballot_box_with_check:
 * Allgemein wichtige Attribute :ballot_box_with_check:
 * Positionierung :ballot_box_with_check:
 * Pseudoklassen und Pseudoselektoren :ballot_box_with_check:
-* Responsive Design :negative_squared_cross_mark:
+* Responsive Design :ballot_box_with_check:
 
 ### JavaScript :negative_squared_cross_mark:
 

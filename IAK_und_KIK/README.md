@@ -372,6 +372,97 @@ Alle Elemente haben außerdem einen vordefinerten Margin und ein vordefiniertes 
 
 ### Responsives Design
 
+#### Relative Einheiten
+
+Anstatt Positionen und Größen in Pixel anzugeben empfiehlt sich relative Enheiten zu nutzen. Diese sind Prozent (%) Viewport-Width (vw) bzw. Viewport-Height (vh). Prozent bezieht sich auf das Elternelement, während vw und vh vom gesamten Bildschirm des Gerätes abhängen.
+
+#### Grid
+
+```html
+    <div class="grid-container">
+        <div class="item" id="1"></div>
+        <div class="item" id="2"></div>
+        <div class="item" id="3"></div>
+        <div class="item" id="4"></div>
+    </div>
+```
+
+```css
+    .grid-container {
+        display: grid;
+        grid-template-rows: 200px 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        /* grid-gap: row col */
+    }
+
+    .item {
+        background: grey;
+    }
+
+    #1 {
+        grid-column-start:1;
+        grid-column-end:5;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
+    #2 {
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+
+    #3 {
+        grid-column-start:4;
+        grid-column-end:5;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+
+    #4 {
+        grid-column-start:1;
+        grid-column-end:5;
+        grid-row-start:3;
+        grid-row-end:4;
+    }
+```
+
+![Grid](https://github.com/rausc-daniel/INH17GAbschlussklausuren/blob/master/IAK_und_KIK/img/grid.png)
+
+#### Media Queries
+
+Wenn sich Elemente bei verschiedenen Bildschirmbreiten anders verhalten sollen nutzt man sogenannte Media-Queries.
+
+```css
+    /* Alle Geräte deren Bildschirm kleiner als 1140px ist */
+    @media screen (max-width: 1440px) {
+        /* Style Rules */
+    }
+```
+
+Es empfiehlt sich die folgenden Media-Queries zu implementieren.
+
+```css
+    @media screen (max-width: 599px) {
+        /* Style Rules */
+    }
+
+    @media screen (min-width: 600px) {
+        /* Style Rules */
+    }
+
+    @media screen (min-width: 980px) {
+        /* Style Rules */
+    }
+
+    @media screen (min-width: 1260px) {
+        /* Style Rules */
+    }
+```
+
 ## JavaScript
 
 ### Generelle Syntax
