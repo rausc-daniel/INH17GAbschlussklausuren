@@ -54,12 +54,10 @@
 * Pseudoklassen und Pseudoselektoren :ballot_box_with_check:
 * Responsive Design :ballot_box_with_check:
 
-### JavaScript :negative_squared_cross_mark:
+### JavaScript :ballot_box_with_check:
 
-* Generelle Syntax :negative_squared_cross_mark:
-* Listen und Objekte :negative_squared_cross_mark:
-* Constructor Functions :negative_squared_cross_mark:
-* Intervalle :negative_squared_cross_mark:
+* Constructor Functions :ballot_box_with_check:
+* Intervalle :ballot_box_with_check:
 
 ### JQuery :negative_squared_cross_mark:
 

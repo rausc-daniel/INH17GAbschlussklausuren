@@ -15,8 +15,6 @@
   * [Pseudoklassen](#pseudoklassen)
   * [Responsives Design](#responsives-design)
 * [JavaScript](#javascript)
-  * [Generelle Syntax](#generelle-syntax)
-  * [Arrays und Objekte](#arrays-und-objekte)
   * [Constructor Functions](#constructor-functions)
   * [Intervalle](#intervalle)
 * [JQuery](#jquery)
@@ -465,13 +463,48 @@ Es empfiehlt sich die folgenden Media-Queries zu implementieren.
 
 ## JavaScript
 
-### Generelle Syntax
-
-### Arrays und Objekte
-
 ### Constructor Functions
 
+Constructor Functions sind (neben Klassen) eine Möglichkeit Objekte vorzudefinieren.
+
+```js
+function Person(first_name, last_name, age) {
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.age = age;
+
+    this.increaseAge = function() {
+        this.age++;
+    }
+}
+
+john = new Person("John", "Doe", 24);
+john.increaseAge();
+
+// John ist jetzt 25
+```
+
 ### Intervalle
+
+Intervalle können mit einer festen Rate folgendermaßen deklariert werden.
+
+```js
+    var sleepTime = 16.667; // Zeit zwischen den Intervallen in ms (60fps)
+    setInterval(function() {
+        // Was im Intervall passieren soll
+    }, sleepTime)
+```
+
+Soll ein Intervall so oft wie möglich ausgeführt werden kann die *requestAnimationFrame*-Methode rekursiv genutzt werden.
+
+```js
+    // time ist die aktuelle Uhrzeit in ms, als int
+    function step(time) {
+        window.requestAnimationFrame(step);
+    }
+
+    window.requestAnimationFrame(step);
+```
 
 ## JQuery
 
