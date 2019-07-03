@@ -18,6 +18,7 @@
   * [Neuronale Netze](#neuronale-netze)
 * [XML](#xml)
   * [Generelles](#generelles)
+  * [X3D](#x3d)
   * [SVG](#svg)
   * [SMIL](#smil)
   * [Schema (XSD)](#xsd)
@@ -659,6 +660,10 @@ XML steht für Extensible Markup Language und ist eine Sprache zur Darstellung v
         </c:Node>
     </c:Namespace>
 ```
+
+### X3D
+
+X3D ist ein XML-Dialekt, der es ermöglicht 3D Objekte mithilfe von XML zu definieren und zum Beispiel im Browser zu rendern.
 
 ### SVG
 
