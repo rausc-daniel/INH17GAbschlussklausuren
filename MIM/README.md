@@ -4,7 +4,7 @@
   * [Use Cases](#use-cases)
   * [Engines](#engines)
   * [IDEs](#ides)
-  * [Vergleich zu C#](vergleich-zu-c#)
+  * [Vergleich zu C#](#vergleich-zu-C#)
 * [C++](#c++)
   * [Generelle Syntax](#generelle-syntax)
   * [Collections](#collections)
