@@ -69,7 +69,7 @@
 
 ### Canvas :negative_squared_cross_mark:
 
-## MIM :large_orange_diamond:
+## MIM :ballot_box_with_check:
 
 ### Was ist C++ :ballot_box_with_check:
 
@@ -78,13 +78,13 @@
 * IDEs :ballot_box_with_check:
 * Vergleich zu C# :ballot_box_with_check:
 
-### C++ :large_orange_diamond:
+### C++ :ballot_box_with_check:
 
 * Generelle Syntax :ballot_box_with_check:
 * Collections :ballot_box_with_check:
 * Klassen, Structs und Vererbung :ballot_box_with_check:
-* Pointer :large_orange_diamond:
-* std :large_orange_diamond:
+* Pointer :ballot_box_with_check:
+* std :ballot_box_with_check:
 
 ## MKG :negative_squared_cross_mark:
 

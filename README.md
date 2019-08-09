@@ -11,7 +11,7 @@
   * CSS
   * JavaScript
   * jQuery
-* [MIM](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MIM) :large_orange_diamond:
+* [MIM](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MIM) :ballot_box_with_check:
   * C++ Theoretisch
   * C++ Praktisch
 * [MKG](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MKG) :negative_squared_cross_mark:

@@ -247,7 +247,17 @@ Pointer sind Adressen im Arbeitsspeicher, an denen Objekte liegen.
     delete j;
 ```
 
-Die verschiedenen Arten von Pointern werden im Abschnitt [std->memory](#memory) behandelt.
+Die verschiedenen Arten von Pointern werden im Abschnitt [std&rarr;memory](#memory) behandelt. Die zuvor behandelten Pointer heißen Raw Pointer.
+
+Eine besondere Art der Raw Pointer ist der void-Pointer. Dieser hat keinen Datentyp und kann somit Referenzen zu jeder Art von Objekt halten und somit auch in jedes Objekt gecastet werden.
+
+```cpp
+    int a = 10;
+    char c = "c";
+
+    void *p = &a; // void* hält Refernz zu einem int
+    *p = &b;      // der selbe void* hält nun eine Refernz zu einem char
+```
 
 ### std
 
@@ -332,4 +342,127 @@ Wie Shared Pointer räumen sich Unique Pointer automatisch auf, sobald ihr refer
 
 ##### Weak Pointer
 
-#### function
+Ein Weak Pointer hält eine Refernz zu einem Objekt, sorgt aber nicht dafür, dass dieses Objekt im Memory bleibt. Der Weak Pointer kann zu jedem Zeitpukt zu einem Strong Pointer (z.B. Shared Pointer) konvertiert werden, sofern der Weak Pointer nicht die einzige Referenz zu dem Objekt ist.
+
+```cpp
+    #include <memory>
+    #include <iostream>
+
+    class Example {
+    public:
+        int x;
+        Example(int _x) : x(_x) { }
+    };
+
+    std::weak_ptr<Example> example;
+
+    void print_weak() {
+        std::shared_ptr<Example> tmp = example.lock(); // Um einen Weak Pointer benutzen zu können muss er in einen Strong Pointer konvertiert werden
+
+        if(tmp != nullptr) {
+            std::cout << "X: " << tmp->x << std::endl;
+        }
+        else {
+            std::cout << "The Weak Pointer has expired" << std::endl;
+        }
+
+    }
+
+    void create_weak() {
+        std::shared_ptr<Example> example_strong = std::make_shared<Example>(10);
+
+        example = example_strong;
+
+        print_weak();
+    } // Der shared pointer wird hier zerstört und das Objekt somit aus dem Memory gelöscht. Der Weak Pointer zeigt nun auf 0
+
+    int main() {
+        create_weak();
+
+        print_weak();
+    }
+```
+
+#### functional
+
+*functional* führt Strukturen ein, die mit delegates aus C# vergleichbar sind. Diese können epxplizit oder implizit genutzt werden.
+
+Die Zuweisung einer impliziten Funktion hat folgenden Aufbau:
+
+\[Variablen aus dem Kontext](Signatur) { Code }
+
+Weist man ein implizite Funktion zu, kann man angeben auf welche Variablen aus dem umliegenden Kontext die Funktion benutzen kann. Dies geht auf drei verschiedene Arten.
+
+1. [var1, &var2] &rarr; var1 wird als Wert übergeben und var2 als referenz (Pointer)
+2. [&] &rarr; Alle Variablen werden als Referenz übergeben
+3. [=] &rarr; Alle Variablen werden als Wert übergeben
+
+```cpp
+    #include <functional>
+    #include <iostream>
+
+    int add(int i, int j){
+        return i + j;
+    }
+
+    int sub(int i, int j){
+        return i - j;
+    }
+
+    int main(){
+        // Eine Funktion, die zwei int's entgegennimmt und einen int zurückgibt
+        std::function<int(int, int)> operation_int;
+
+        int i = 4;
+        int j = 2;
+
+        operation_int = add;
+
+        std::cout << "operation_int()  -> " << operation_int(i, j) << std::endl;
+
+        operation_int = sub;
+
+        std::cout << "operation_int()  -> " << operation_int(i, j) << std::endl;
+
+        // operation_int wird eine anonyme Funktion zugewiesen. Auch diese muss zwei int's annehmen
+        operation_int = [](int i, int j) {
+            return i * j;
+        };
+
+        std::cout << "operation_int()  -> " << operation_int(i, j) << std::endl;
+
+        int *result = new int(0);
+
+        // operation_void wird ebenfalls eine anonyme Funktion zugewisen, die allerdings keine Signatur hat. Ihr werden Variablen außerhalb ihres Kontextes zugänglich gemacht (result, i, j)
+        std::function<void()> operation_void = [result, i, j]() {
+            *result = i / j;
+        };
+
+        operation_void();
+
+        std::cout << "operation_void() -> " << *result << std::endl;
+    }
+```
+
+Viele std Funktion nutzen anonyme/implizite Funktionen um Conditions abzubilden.
+
+```cpp
+    #include <iostream>
+    #include <algorithm>
+    #include <vector>
+    #include <string>
+
+    std::vector<int> example = {1, 4, 2, 0, 7};
+
+    int main() {
+        std::sort(example.begin(), example.end(), [](int i, int j) { return i < j; });
+
+        std::string result = "";
+
+        for(int i : example) {
+            result += std::to_string(i) + ", ";
+        }
+
+        std::cout << result.substr(0, result.size() - 1) << std::endl;
+    }
+```
