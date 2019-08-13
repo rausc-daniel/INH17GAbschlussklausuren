@@ -23,6 +23,12 @@
   * [Maus und Tastaturinput](#maus-und-tastaturinput)
   * [Attribute und Klassen](#attribute-und-klassen)
   * [Formulare auslesen](#formulare-auslesen)
+* [Canvas](#canvas)
+  * [Formen](#formen)
+  * [Sprites](#sprites)
+  * [Animationen](#animationen)
+  * [Tilemap](#tilemap)
+  * [Kollisionsabfrage](#Kollisionsabfrage)
 
 ## HTML
 
@@ -39,7 +45,7 @@ Der *body* besteht aus den sichtbaren Informationen der Website.
     <title>Beispiel Dokument</title>
     <style>
         * {
-            
+
         }
     </style>
 </head>
@@ -706,17 +712,55 @@ Das Setup für eine responsive Canvas sieht folgendermaßen aus.
         // closePath verbindet den letzten Punkt mit dem Ersten
         context.closePath();
         context.fill();
+
+        // clearRect(x, y, w, h)
+        // Löscht alles auf der Canvas
+        context.clearRect(0, 0, canvas.attr("width"), canvas.attr("heigth"));
     }
 ```
 
 ### Sprites
 
+```js
+    function renderLoop() {
+        var img = new Image();
+        img.src = "./image.png";
+
+        // drawImage(src, x, y, w, h)
+        context.drawImage(img, 50, 50, 200, 410);
+
+        // drawImage(src, mask_x, mask_y, mask_w, mask_h, x, y, w, h)
+        context.drawImage(img, 0, 0, 400, 400, 200, 50, 200, 200);
+        context.drawImage(img, 0, 400, 400, 400, 200, 275, 200, 200);
+    }
+```
+
 #### Animationen
+
+Animationen lassen sich mithilfe der Maske auf einem animationsheet abbilden.
 
 #### Tilemap
 
+Ähnlich wie Animationen lassen sich mit der Maske Abschnitte aus einer Tilemap "ausschneiden" und wiederholt nutzen.
+
 ### Prallaxeffekt
 
-### Collisionsabfrage
+Um einen Parallaxeffekt zu erzeugen rendert man das gleiche Bild mehrmals hintereinander (X oder Y Richtung) und die verschiedenen Bilder zeitlich hintereinander. Je später das Bild gerendert wird, desto schneller muss es bewegt werden.
 
-### Objekte um Pivot rotieren
+### Kollisionsabfrage
+
+```cpp
+    // AABB Collision -> Rechtecke
+    if (this.x < other.x + other.width &&
+        this.x + this.width > other.x &&
+        this.y < other.y + other.height &&
+        this.y + this.width > other.y) {
+        // Collision
+    }
+
+    // Radiale Collision -> Kreise
+    if(Math.sqrt(Math.pow(other.x - this.x, 2) +
+       Math.pow(other.y - this.y, 2) < this.r + other.r) {
+        // Collision
+    }
+```

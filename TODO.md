@@ -36,7 +36,7 @@
 
 * Vim :ballot_box_with_check:
 
-## IAK und KIK :large_orange_diamond:
+## IAK und KIK :ballot_box_with_check:
 
 ### HTML :ballot_box_with_check:
 
@@ -67,7 +67,13 @@
 * Attribute und Klassen :ballot_box_with_check:
 * Formulare :ballot_box_with_check:
 
-### Canvas :negative_squared_cross_mark:
+### Canvas :ballot_box_with_check:
+
+* Formen :ballot_box_with_check:
+* Sprites :ballot_box_with_check:
+* Animationen :ballot_box_with_check:
+* Tilemap :ballot_box_with_check:
+* Kollisionsabfrage :ballot_box_with_check:
 
 ## MIM :ballot_box_with_check:
 

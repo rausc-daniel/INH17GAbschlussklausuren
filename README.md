@@ -6,11 +6,12 @@
   * Python
   * Künstliche Intelligenz
   * XML
-* [IAK und KIK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/IAK_und_KIK) :large_orange_diamond:
+* [IAK und KIK](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/IAK_und_KIK) :ballot_box_with_check:
   * HTML
   * CSS
   * JavaScript
   * jQuery
+  * Canvas
 * [MIM](https://github.com/rausc-daniel/INH17GAbschlussklausuren/tree/master/MIM) :ballot_box_with_check:
   * C++ Theoretisch
   * C++ Praktisch
