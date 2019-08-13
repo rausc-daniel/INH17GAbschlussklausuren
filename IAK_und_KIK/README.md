@@ -622,3 +622,101 @@ Um DOM-Objekte zu selektieren und in JQuery-Objekte zu transformieren nutzt man 
         text += $(this).val() + " ";
     });
 ```
+
+## Canvas
+
+Um die Canvas nutzen zu können ist mindestens folgendes HTML-Dokument von Nöten (jQuery kann vermieden werden).
+
+```html
+    <head>
+        <script href="jQuery.js"></script>
+    </head>
+    <body>
+        <canvas width="" height=""></canvas>
+        <script href="canvas.js"></script>
+    </body
+```
+
+Das Setup für eine responsive Canvas sieht folgendermaßen aus.
+
+```js
+    // canvas.js
+
+    $(() => {
+        const win = $(window);
+
+        const canvasPercentage = {
+            x: 0.5,
+            y: 0.5
+        };
+
+        const canvas = $("canvas");
+        const context = canvas[0].getContext("2d");
+
+        // wird jeden Frame ausgeführt
+        function renderLoop() {
+            // Code zum Rendern
+        }
+
+        // Größe der Canvas setzen
+        canvas.attr("width", win.width() * canvasPercentage.x);
+        canvas.attr("height", win.height() * canvasPercentage.y);
+
+        // Größe der Canvas anpassen, wenn das Fenster vergrößert wird
+        win.resize(() => {
+            canvas.attr("width", win.width() * canvasPercentage.x);
+            canvas.attr("height", win.height() * canvasPercentage.y);
+        });
+
+        // 16.667ms timeout jeden Aufruf sind 60fps
+        setInterval(renderLoop, 16.667);
+    });
+```
+
+### Formen
+
+```js
+    function toRadians(angle) {
+        return angle * Math.PI / 180;
+    }
+
+    function renderLoop() {
+        // rect(x, y, w, h)
+        context.fillRect(100, 100, 50, 50);
+        context.strokeRect(100, 200, 50, 50);
+
+        // arc(x, y, r, start_angle, end_angle, clockwise?)
+        // jeder neue arc muss begonnen werden
+        context.beginPath();
+        // Winkel müssen im Bogenmaß angegeben werden (pi = 180° = 1/2 Kreis)
+        context.arc(200, 100, 25, 0, Math.PI * 2);
+        // jeder arc muss einzeln gefüllt werden
+        context.fill();
+
+        context.beginPath();
+        context.arc(200, 200, 25, 0, Math.PI, false);
+        context.stroke();
+
+        // moveTo(x, y) und lineTo(x, y)
+        context.beginPath();
+        // moveTo bewegt den cursor, zeichnet aber keine Linie
+        context.moveTo(275, 75);
+        context.lineTo(250, 125);
+        context.lineTo(300, 125);
+        // closePath verbindet den letzten Punkt mit dem Ersten
+        context.closePath();
+        context.fill();
+    }
+```
+
+### Sprites
+
+#### Animationen
+
+#### Tilemap
+
+### Prallaxeffekt
+
+### Collisionsabfrage
+
+### Objekte um Pivot rotieren
